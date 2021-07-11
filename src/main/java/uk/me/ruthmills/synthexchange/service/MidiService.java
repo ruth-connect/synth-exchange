@@ -1,18 +1,18 @@
 package uk.me.ruthmills.synthexchange.service;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.sound.midi.MidiDevice;
 
 public interface MidiService {
 
-	public List<MidiDevice.Info> getMidiDevices();
+	public Set<String> getMidiDevices();
 
 	public MidiDevice getMidiInputDevice();
 
-	public void setMidiInputDevice(MidiDevice.Info midiInputDeviceInfo);
+	public void setMidiInputDevice(String midiInputDevice);
 
 	public MidiDevice getMidiOutputDevice();
 
-	public void setMidiOutputDevice(MidiDevice.Info midiOutputDeviceInfo);
+	public void setMidiOutputDevice(String midiOutputDevice);
 }
