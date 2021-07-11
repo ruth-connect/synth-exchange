@@ -6,6 +6,7 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -38,6 +39,8 @@ public class MainView extends VerticalLayout {
 		inputs.setHeightByRows(true);
 		add(inputs);
 
+		Button addInputButton = new Button("Add Input");
+
 		Label outputsLabel = new Label("Outputs");
 		add(outputsLabel);
 
@@ -45,6 +48,8 @@ public class MainView extends VerticalLayout {
 		outputs.setColumns("manufacturer", "model", "connection", "channel");
 		outputs.setHeightByRows(true);
 		add(outputs);
+
+		Button addOutputButton = new Button("Add Output");
 
 		midiInputSelect = new Select<>();
 		midiInputSelect.setLabel("MIDI Input");
