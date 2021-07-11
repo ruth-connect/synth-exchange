@@ -9,5 +9,4 @@ public class SynthExchangeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SynthExchangeApplication.class, args);
 	}
-
 }
