@@ -1,0 +1,776 @@
+{
+	"manufacturer": "Generic",
+	"model": "MIDI CC",
+	"type": "midi",
+	"format": "B${channel}${parameter}${value}",
+	"parameters": [
+		{
+			"parameter": "00",
+			"name": "0 - Bank Select (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "01",
+			"name": "1 - Modulation Wheel",
+			"minValue": "00",
+			"maxValue": "7F"
+		},	
+		{
+			"parameter": "02",
+			"name": "2 - Breath Controller",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "03",
+			"name": "3 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "04",
+			"name": "4 - Foot Pedal (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "05",
+			"name": "5 - Portamento Time (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "06",
+			"name": "6 - Data Entry (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "07",
+			"name": "7 - Volume (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "08",
+			"name": "8 - Balance (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "09",
+			"name": "9 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0A",
+			"name": "10 - Pan Position (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0B",
+			"name": "11 - Expression (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0C",
+			"name": "12 - Effect Control 1 (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0D",
+			"name": "13 - Effect Control 2 (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0E",
+			"name": "14 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0F",
+			"name": "15 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "10",
+			"name": "16 - General Purpose",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "11",
+			"name": "17 - General Purpose",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "12",
+			"name": "18 - General Purpose",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "13",
+			"name": "19 - General Purpose",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "14",
+			"name": "20 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "15",
+			"name": "21 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "16",
+			"name": "22 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "17",
+			"name": "23 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "18",
+			"name": "24 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "19",
+			"name": "25 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1A",
+			"name": "26 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1B",
+			"name": "27 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1C",
+			"name": "28 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1D",
+			"name": "29 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1E",
+			"name": "30 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1F",
+			"name": "31 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "20",
+			"name": "32 - Controller 0",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "21",
+			"name": "33 - Controller 1",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "22",
+			"name": "34 - Controller 2",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "23",
+			"name": "35 - Controller 3",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "24",
+			"name": "36 - Controller 4",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "25",
+			"name": "37 - Controller 5",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "26",
+			"name": "38 - Controller 6",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "27",
+			"name": "39 - Controller 7",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "28",
+			"name": "40 - Controller 8",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "29",
+			"name": "41 - Controller 9",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2A",
+			"name": "42 - Controller 10",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2B",
+			"name": "43 - Controller 11",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2C",
+			"name": "44 - Controller 12",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2D",
+			"name": "45 - Controller 13",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2E",
+			"name": "46 - Controller 14",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2F",
+			"name": "47 - Controller 15",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "30",
+			"name": "48 - Controller 16",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "31",
+			"name": "49 - Controller 17",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "32",
+			"name": "50 - Controller 18",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "33",
+			"name": "51 - Controller 19",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "34",
+			"name": "52 - Controller 20",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "35",
+			"name": "53 - Controller 21",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "36",
+			"name": "54 - Controller 22",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "37",
+			"name": "55 - Controller 23",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "38",
+			"name": "56 - Controller 24",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "39",
+			"name": "57 - Controller 25",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3A",
+			"name": "58 - Controller 26",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3B",
+			"name": "59 - Controller 27",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3C",
+			"name": "60 - Controller 28",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3D",
+			"name": "61 - Controller 29",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3E",
+			"name": "62 - Controller 30",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3F",
+			"name": "63 - Controller 31",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "40",
+			"name": "64 - Hold Pedal (on/off)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "41",
+			"name": "65 - Portamento (on/off)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "42",
+			"name": "66 - Sostenuto Pedal (on/off)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "43",
+			"name": "67 - Soft Padal (on/off)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "44",
+			"name": "68 - Legato Pedal (on/off)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "45",
+			"name": "69 - Hold 2 Pedal (on/off)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "46",
+			"name": "70 - Sound Variation",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "47",
+			"name": "71 - Resonance (Timbre)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "48",
+			"name": "72 - Sound Release Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "49",
+			"name": "73 - Sound Attack Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4A",
+			"name": "74 - Frequency Cutoff (Brightness)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4B",
+			"name": "75 - Sound Control 6",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4C",
+			"name": "76 - Sound Control 7",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4D",
+			"name": "77 - Sound Control 8",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4E",
+			"name": "78 - Sound Control 9",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4F",
+			"name": "79 - Sound Control 10",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "50",
+			"name": "80 - Decay or General Purpose Button 1 (on/off) / Roland Tone level 1",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "51",
+			"name": "81 - Hi Pass Filter Frequency or General Purpose Button 2 (on/off) / Roland Tone level 2",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "52",
+			"name": "82 - General Purpose Button 3 (on/off) / Roland Tone level 3",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "53",
+			"name": "83 - General Purpose Button 4 (on/off) / Roland Tone level 4",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "54",
+			"name": "84 - Portamento Amount",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "55",
+			"name": "85 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "56",
+			"name": "86 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "57",
+			"name": "87 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "58",
+			"name": "88 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "59",
+			"name": "89 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5A",
+			"name": "90 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5B",
+			"name": "91 - Reverb Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5C",
+			"name": "92 - Tremolo Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5D",
+			"name": "93 - Chorus Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5E",
+			"name": "94 - Detune Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5F",
+			"name": "95 - Phaser Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "60",
+			"name": "96 - Data Button increment",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "61",
+			"name": "97 - Data Button decrement",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "62",
+			"name": "98 - Non-registered Parameter (LSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "63",
+			"name": "99 - Non-registered Parameter (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "64",
+			"name": "100 - Registered Parameter (LSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "65",
+			"name": "101 - Registered Parameter (MSB)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "66",
+			"name": "102 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "67",
+			"name": "103 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "68",
+			"name": "104 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "69",
+			"name": "105 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "6A",
+			"name": "106 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "6B",
+			"name": "107 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "6C",
+			"name": "108 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "6D",
+			"name": "109 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "6E",
+			"name": "110 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "6F",
+			"name": "111 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "70",
+			"name": "112 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "71",
+			"name": "113 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "72",
+			"name": "114 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "73",
+			"name": "115 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "74",
+			"name": "116 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "75",
+			"name": "117 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "76",
+			"name": "118 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "77",
+			"name": "119 - Undefined",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "78",
+			"name": "120 - All Sound Off",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "79",
+			"name": "121 - All Controllers Off",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "7A",
+			"name": "122 - Local Keyboard (on/off)",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "7B",
+			"name": "123 - All Notes Off",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "7C",
+			"name": "124 - Omni Mode Off",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "7D",
+			"name": "125 - Omni Mode On",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "7E",
+			"name": "126 - Mono Operation",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "7F",
+			"name": "127 - Poly Mode",
+			"minValue": "00",
+			"maxValue": "7F"
+		}
+	]
+}
