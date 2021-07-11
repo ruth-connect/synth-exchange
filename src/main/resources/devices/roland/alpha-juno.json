@@ -1,7 +1,7 @@
 {
 	"manufacturer": "Roland",
 	"model": "Alpha Juno",
-	"type": "sysex",
+	"type": "midi",
 	"format": "F04136${channel}232001${parameter}${value}F7",
 	"parameters": [
 		{
