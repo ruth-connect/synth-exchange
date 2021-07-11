@@ -130,7 +130,7 @@
 		},
 		{
 			"parameter": "0A",
-			"name": "Chorus",
+			"name": "Chorus Switch",
 			"values": [
 				{
 					"value": "0",
