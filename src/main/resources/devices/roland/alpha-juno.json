@@ -1,0 +1,296 @@
+{
+	"manufacturer": "Roland",
+	"model": "Alpha Juno",
+	"type": "sysex",
+	"format": "F04136${channel}232001${parameter}${value}F7",
+	"parameters": [
+		{
+			"parameter": "00",
+			"name": "DCO Env. Mode",
+			"values": [
+				{
+					"value": "00",
+					"name": "Normal"
+				},
+				{
+					"value": "01",
+					"name": "Inverted"
+				},
+				{
+					"value": "02",
+					"name": "Normal-Dynamic"
+				},
+				{
+					"value": "03",
+					"name": "Inv.-Dynamic"
+				}
+			]
+		},
+		{
+			"parameter": "01",
+			"name": "VCF Env. Mode",
+			"values": [
+				{
+					"value": "00",
+					"name": "Normal"
+				},
+				{
+					"value": "01",
+					"name": "Inverted"
+				},
+				{
+					"value": "02",
+					"name": "Normal-Dynamic"
+				},
+				{
+					"value": "03",
+					"name": "Dynamic"
+				}
+			]
+		},
+		{
+			"parameter": "02",
+			"name": "VCA Env. Mode",
+			"values": [
+				{
+					"value": "00",
+					"name": "Normal"
+				},
+				{
+					"value": "01",
+					"name": "Gate"
+				},
+				{
+					"value": "02",
+					"name": "Normal-Dynamic"
+				},
+				{
+					"value": "03",
+					"name": "Gate-Dynamic"
+				}
+			]
+		},
+		{
+			"parameter": "03",
+			"name": "DCO Wave Pulse",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "04",
+			"name": "DCO Wave Saw",
+			"minValue": "00",
+			"maxValue": "05"
+		},
+		{
+			"parameter": "05",
+			"name": "DCO Wave Sub",
+			"minValue": "00",
+			"maxValue": "05"
+		},
+		{
+			"parameter": "06",
+			"name": "DCO Range",
+			"values": [
+				{
+					"value": "00",
+					"name": "4'"
+				},
+				{
+					"value": "01",
+					"name": "8'"
+				},
+				{
+					"value": "02",
+					"name": "16'"
+				},
+				{
+					"value": "03",
+					"name": "32'"
+				}
+			]	
+		},
+		{
+			"parameter": "07",
+			"name": "DCO Sub Level",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "08",
+			"name": "Noise Level",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "09",
+			"name": "HPF Cutoff",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "0A",
+			"name": "Chorus",
+			"values": [
+				{
+					"value": "0",
+					"name": "Off"
+				},
+				{
+					"value": "1",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "0B",
+			"name": "DCO LFO Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0C",
+			"name": "DCO Env Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0D",
+			"name": "DCO Aftertouch Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0E",
+			"name": "DCO PWM Depth",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0F",
+			"name": "DCO PWM Rate",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "10",
+			"name": "VCF Cutoff",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "11",
+			"name": "VCF Resonance",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "12",
+			"name": "VCF LFO Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "13",
+			"name": "VCF ENV Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "14",
+			"name": "VCF Key Follow",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "15",
+			"name": "VCF Aftertouch",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "16",
+			"name": "VCA Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "17",
+			"name": "VCA Aftertouch",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "18",
+			"name": "LFO Rate",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "19",
+			"name": "LFO Delay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1A",
+			"name": "ENV T1 - Attack Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1B",
+			"name": "ENV L1 - Attack Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1C",
+			"name": "ENV T2 - Break Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1D",
+			"name": "ENV L2 - Break Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1E",
+			"name": "ENV T3 - Decay Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1F",
+			"name": "ENV L3 - Sustain Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "20",
+			"name": "ENV T4 - Release Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "21",
+			"name": "ENV Key Follow",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "22",
+			"name": "Chorus Rate",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "23",
+			"name": "Pitch Bender Range",
+			"minValue": "00",
+			"maxValue": "0C"
+		}
+	]		
+}
