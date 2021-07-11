@@ -2,7 +2,7 @@
 	"manufacturer": "Roland",
 	"model": "Alpha Juno",
 	"type": "midi",
-	"format": "F04136${channel}232001${parameter}${value}F7",
+	"format": "F0413600232001${parameter}${value}F7",
 	"parameters": [
 		{
 			"parameter": "00",
