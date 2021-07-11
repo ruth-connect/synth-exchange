@@ -40,6 +40,7 @@ public class MainView extends VerticalLayout {
 		add(inputs);
 
 		Button addInputButton = new Button("Add Input");
+		add(addInputButton);
 
 		Label outputsLabel = new Label("Outputs");
 		add(outputsLabel);
@@ -50,6 +51,7 @@ public class MainView extends VerticalLayout {
 		add(outputs);
 
 		Button addOutputButton = new Button("Add Output");
+		add(addOutputButton);
 
 		midiInputSelect = new Select<>();
 		midiInputSelect.setLabel("MIDI Input");
