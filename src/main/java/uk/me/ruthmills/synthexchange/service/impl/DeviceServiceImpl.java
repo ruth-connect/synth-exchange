@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import uk.me.ruthmills.synthexchange.model.Device;
+import uk.me.ruthmills.synthexchange.model.device.Device;
 import uk.me.ruthmills.synthexchange.service.DeviceService;
 
 @Service

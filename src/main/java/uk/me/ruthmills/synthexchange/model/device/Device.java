@@ -1,4 +1,4 @@
-package uk.me.ruthmills.synthexchange.model;
+package uk.me.ruthmills.synthexchange.model.device;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;

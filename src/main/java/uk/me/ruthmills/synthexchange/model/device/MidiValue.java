@@ -1,4 +1,4 @@
-package uk.me.ruthmills.synthexchange.model;
+package uk.me.ruthmills.synthexchange.model.device;
 
 public class MidiValue {
 
