@@ -6,10 +6,12 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.router.Route;
 
+import uk.me.ruthmills.synthexchange.model.mapping.DeviceMapping;
 import uk.me.ruthmills.synthexchange.service.MidiService;
 
 @Route
@@ -20,10 +22,19 @@ public class MainView extends VerticalLayout {
 	@Autowired
 	private MidiService midiService;
 
+	private Grid<DeviceMapping> inputs;
+	private Grid<DeviceMapping> outputs;
+
 	private Select<String> midiInputSelect;
 	private Select<String> midiOutputSelect;
 
 	public MainView() {
+		inputs = new Grid<>(DeviceMapping.class);
+		add(inputs);
+
+		outputs = new Grid<>(DeviceMapping.class);
+		add(outputs);
+
 		midiInputSelect = new Select<>();
 		midiInputSelect.setLabel("MIDI Input");
 		add(midiInputSelect);
