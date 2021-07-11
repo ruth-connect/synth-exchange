@@ -7,6 +7,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.router.Route;
@@ -29,12 +30,20 @@ public class MainView extends VerticalLayout {
 	private Select<String> midiOutputSelect;
 
 	public MainView() {
+		Label inputsLabel = new Label("Inputs");
+		add(inputsLabel);
+
 		inputs = new Grid<>(DeviceMapping.class);
 		inputs.setColumns("manufacturer", "model", "connection", "channel");
+		inputs.setHeightByRows(true);
 		add(inputs);
+
+		Label outputsLabel = new Label("Outputs");
+		add(outputsLabel);
 
 		outputs = new Grid<>(DeviceMapping.class);
 		outputs.setColumns("manufacturer", "model", "connection", "channel");
+		outputs.setHeightByRows(true);
 		add(outputs);
 
 		midiInputSelect = new Select<>();
