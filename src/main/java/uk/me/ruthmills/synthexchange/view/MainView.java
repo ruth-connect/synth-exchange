@@ -3,6 +3,7 @@ package uk.me.ruthmills.synthexchange.view;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.select.Select;
@@ -11,6 +12,7 @@ import com.vaadin.flow.router.Route;
 import uk.me.ruthmills.synthexchange.service.MidiService;
 
 @Route
+@Component
 public class MainView extends VerticalLayout {
 
 	private static final long serialVersionUID = 1L;
