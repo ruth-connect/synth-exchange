@@ -4,18 +4,18 @@ import java.util.List;
 
 public class MidiParameter {
 
-	private String getParameter;
+	private String parameter;
 	private String name;
 	private String minValue;
 	private String maxValue;
 	private List<MidiValue> values;
 
-	public String getGetParameter() {
-		return getParameter;
+	public String getParameter() {
+		return parameter;
 	}
 
-	public void setGetParameter(String getParameter) {
-		this.getParameter = getParameter;
+	public void setParameter(String parameter) {
+		this.parameter = parameter;
 	}
 
 	public String getName() {
