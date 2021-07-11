@@ -30,9 +30,11 @@ public class MainView extends VerticalLayout {
 
 	public MainView() {
 		inputs = new Grid<>(DeviceMapping.class);
+		inputs.setColumns("manufacturer", "model", "connection", "channel");
 		add(inputs);
 
 		outputs = new Grid<>(DeviceMapping.class);
+		outputs.setColumns("manufacturer", "model", "connection", "channel");
 		add(outputs);
 
 		midiInputSelect = new Select<>();

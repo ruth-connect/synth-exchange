@@ -4,7 +4,7 @@ public class DeviceMapping {
 
 	private String manufacturer;
 	private String model;
-	private String device;
+	private String connection;
 	private String channel;
 
 	public String getManufacturer() {
@@ -23,12 +23,12 @@ public class DeviceMapping {
 		this.model = model;
 	}
 
-	public String getDevice() {
-		return device;
+	public String getConnection() {
+		return connection;
 	}
 
-	public void setDevice(String device) {
-		this.device = device;
+	public void setConnection(String connection) {
+		this.connection = connection;
 	}
 
 	public String getChannel() {
