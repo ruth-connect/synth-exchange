@@ -1,7 +1,5 @@
 package uk.me.ruthmills.synthexchange.view;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.flow.component.dialog.Dialog;

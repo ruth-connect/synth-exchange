@@ -5,6 +5,7 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,7 +44,7 @@ public class DeviceServiceImpl implements DeviceService {
 						logger.error("Error reading JSON", ex);
 						return null;
 					}
-				}).filter(p -> p != null).collect(Collectors.toList());
+				}).filter(p -> p != null).sorted(Comparator.comparing(Device::getName)).collect(Collectors.toList());
 	}
 
 	@Override

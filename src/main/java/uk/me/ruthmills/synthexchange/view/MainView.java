@@ -1,6 +1,8 @@
 package uk.me.ruthmills.synthexchange.view;
 
-import java.util.Set;
+import java.util.List;
+
+import javax.sound.midi.MidiDevice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -22,12 +24,12 @@ public class MainView extends VerticalLayout {
 	private Grid<DeviceMapping> inputs;
 	private Grid<DeviceMapping> outputs;
 
-	private Select<String> midiInputSelect;
-	private Select<String> midiOutputSelect;
+	private Select<MidiDevice.Info> midiInputSelect;
+	private Select<MidiDevice.Info> midiOutputSelect;
 	
 	@Autowired
 	public MainView(MidiService midiService, AddInputDialog addInputDialog) {
-		Set<String> midiDevices = midiService.getMidiDevices();
+		List<MidiDevice.Info> midiDevices = midiService.getMidiDevices();
 		
 		Label inputsLabel = new Label("Inputs");
 		add(inputsLabel);
@@ -54,12 +56,14 @@ public class MainView extends VerticalLayout {
 
 		midiInputSelect = new Select<>();
 		midiInputSelect.setLabel("MIDI Input");
+		midiInputSelect.setItemLabelGenerator(MidiDevice.Info::getName);
 		midiInputSelect.setItems(midiDevices);
 		add(midiInputSelect);
 
 		midiOutputSelect = new Select<>();
 		midiOutputSelect.setLabel("MIDI Output");
 		midiOutputSelect.setItems(midiDevices);
+		midiOutputSelect.setItemLabelGenerator(MidiDevice.Info::getName);
 		add(midiOutputSelect);
 	}
 }
