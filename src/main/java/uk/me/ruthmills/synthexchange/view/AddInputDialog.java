@@ -51,18 +51,21 @@ public class AddInputDialog extends Dialog {
 
 		deviceSelect = new Select<>();
 		deviceSelect.setLabel("Device");
+		deviceSelect.setPlaceholder("Select a device");
 		deviceSelect.setItemLabelGenerator(Device::getName);
 		deviceSelect.setItems(deviceService.getDevices());
 		formLayout.add(deviceSelect);
 
 		midiInterfaceSelect = new Select<>();
 		midiInterfaceSelect.setLabel("MIDI Interface");
+		midiInterfaceSelect.setPlaceholder("Select a MIDI interface");
 		midiInterfaceSelect.setItemLabelGenerator(javax.sound.midi.MidiDevice.Info::getName);
 		midiInterfaceSelect.setItems(midiService.getMidiInputs());
 		formLayout.add(midiInterfaceSelect);
 
 		midiChannelSelect = new Select<>();
 		midiChannelSelect.setLabel("MIDI Channel");
+		midiChannelSelect.setPlaceholder("Select a MIDI channel");
 		midiChannelSelect.setItems(IntStream.rangeClosed(1, 16).boxed().collect(Collectors.toList()));
 		formLayout.add(midiChannelSelect);
 
