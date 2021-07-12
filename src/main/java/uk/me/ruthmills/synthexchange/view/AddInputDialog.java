@@ -88,14 +88,18 @@ public class AddInputDialog extends Dialog {
 
 			deviceMappingService.addInput(deviceMapping);
 		}
-		deviceSelect.setValue(null);
+		clear();
 		this.close();
 	}
 
 	private void cancel() {
+		clear();
+		this.close();
+	}
+
+	private void clear() {
 		deviceSelect.setValue(null);
 		midiInterfaceSelect.setValue(null);
 		midiChannelSelect.setValue(null);
-		this.close();
 	}
 }
