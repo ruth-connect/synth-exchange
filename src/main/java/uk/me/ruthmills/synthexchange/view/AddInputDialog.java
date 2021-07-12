@@ -8,6 +8,7 @@ import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
 
 import uk.me.ruthmills.synthexchange.model.device.Device;
+import uk.me.ruthmills.synthexchange.service.DeviceMappingService;
 import uk.me.ruthmills.synthexchange.service.DeviceService;
 import uk.me.ruthmills.synthexchange.service.MidiService;
 
@@ -20,7 +21,7 @@ public class AddInputDialog extends Dialog {
 	private Select<Device> deviceSelect;
 	
 	@Autowired
-	public AddInputDialog(MidiService midiService, DeviceService deviceService) {
+	public AddInputDialog(MidiService midiService, DeviceService deviceService, DeviceMappingService deviceMappingService) {
 		deviceSelect = new Select<>();
 		deviceSelect.setLabel("Device");
 		deviceSelect.setItemLabelGenerator(Device::getName);
