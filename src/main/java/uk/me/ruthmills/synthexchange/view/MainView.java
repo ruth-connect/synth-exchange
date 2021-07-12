@@ -1,7 +1,5 @@
 package uk.me.ruthmills.synthexchange.view;
 
-import java.util.List;
-
 import javax.sound.midi.MidiDevice;
 
 import org.springframework.beans.factory.annotation.Autowired;
