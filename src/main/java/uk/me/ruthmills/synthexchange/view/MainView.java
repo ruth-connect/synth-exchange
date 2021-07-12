@@ -12,6 +12,7 @@ import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.router.Route;
 
 import uk.me.ruthmills.synthexchange.model.mapping.DeviceMapping;
+import uk.me.ruthmills.synthexchange.service.DeviceMappingService;
 import uk.me.ruthmills.synthexchange.service.MidiService;
 
 @Route
@@ -24,14 +25,15 @@ public class MainView extends VerticalLayout {
 
 	private Select<MidiDevice.Info> midiInputSelect;
 	private Select<MidiDevice.Info> midiOutputSelect;
-	
+
 	@Autowired
-	public MainView(MidiService midiService, AddInputDialog addInputDialog) {		
+	public MainView(MidiService midiService, DeviceMappingService deviceMappingService, AddInputDialog addInputDialog) {
 		Label inputsLabel = new Label("Inputs");
 		add(inputsLabel);
 
 		inputs = new Grid<>(DeviceMapping.class);
 		inputs.setColumns("manufacturer", "model", "connection", "channel");
+		inputs.setItems(deviceMappingService.getInputs());
 		inputs.setHeightByRows(true);
 		add(inputs);
 
@@ -44,6 +46,7 @@ public class MainView extends VerticalLayout {
 
 		outputs = new Grid<>(DeviceMapping.class);
 		outputs.setColumns("manufacturer", "model", "connection", "channel");
+		outputs.setItems(deviceMappingService.getOutputs());
 		outputs.setHeightByRows(true);
 		add(outputs);
 
