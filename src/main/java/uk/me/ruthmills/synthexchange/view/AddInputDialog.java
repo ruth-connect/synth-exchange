@@ -1,11 +1,16 @@
 package uk.me.ruthmills.synthexchange.view;
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.formlayout.FormLayout;
+import com.vaadin.flow.component.formlayout.FormLayout.ResponsiveStep;
+import com.vaadin.flow.component.formlayout.FormLayout.ResponsiveStep.LabelsPosition;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
@@ -28,6 +33,7 @@ public class AddInputDialog extends Dialog {
 	private FormLayout formLayout;
 	private Select<Device> deviceSelect;
 	private Select<javax.sound.midi.MidiDevice.Info> midiInterfaceSelect;
+	private Select<Integer> midiChannelSelect;
 	private Button addInputButton;
 	private Button cancelButton;
 
@@ -36,8 +42,10 @@ public class AddInputDialog extends Dialog {
 			DeviceMappingService deviceMappingService) {
 
 		this.deviceMappingService = deviceMappingService;
+		this.setWidth("400px");
 
 		formLayout = new FormLayout();
+		formLayout.setResponsiveSteps(new ResponsiveStep("0", 1, LabelsPosition.TOP));
 		formLayout.add(new Text("Add Input"));
 		add(formLayout);
 
@@ -52,6 +60,11 @@ public class AddInputDialog extends Dialog {
 		midiInterfaceSelect.setItemLabelGenerator(javax.sound.midi.MidiDevice.Info::getName);
 		midiInterfaceSelect.setItems(midiService.getMidiInputs());
 		formLayout.add(midiInterfaceSelect);
+
+		midiChannelSelect = new Select<>();
+		midiChannelSelect.setLabel("MIDI Channel");
+		midiChannelSelect.setItems(IntStream.rangeClosed(1, 16).boxed().collect(Collectors.toList()));
+		formLayout.add(midiChannelSelect);
 
 		addInputButton = new Button("Add Input", e -> addInput());
 		formLayout.add(addInputButton);
@@ -69,6 +82,8 @@ public class AddInputDialog extends Dialog {
 			if (device instanceof MidiDevice) {
 				MidiDevice midiDevice = (MidiDevice) device;
 				deviceMapping.setModel(midiDevice.getModel());
+				deviceMapping.setConnection(midiInterfaceSelect.getValue().getName());
+				deviceMapping.setChannel(midiChannelSelect.getValue().toString());
 			}
 
 			deviceMappingService.addInput(deviceMapping);
@@ -79,6 +94,8 @@ public class AddInputDialog extends Dialog {
 
 	private void cancel() {
 		deviceSelect.setValue(null);
+		midiInterfaceSelect.setValue(null);
+		midiChannelSelect.setValue(null);
 		this.close();
 	}
 }
