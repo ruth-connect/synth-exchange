@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 @JsonSubTypes({ @Type(value = MidiDevice.class, name = "midi") })
-public class Device {
+public abstract class Device {
 
 	private String manufacturer;
 	private String type;
@@ -25,5 +25,9 @@ public class Device {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+	
+	public String getName() {
+		return manufacturer;
 	}
 }

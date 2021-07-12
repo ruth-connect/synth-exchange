@@ -16,6 +16,10 @@ public class MidiDevice extends Device {
 		this.model = model;
 	}
 
+	public String getName() {
+		return getManufacturer() + " - " + model;
+	}
+	
 	public String getFormat() {
 		return format;
 	}

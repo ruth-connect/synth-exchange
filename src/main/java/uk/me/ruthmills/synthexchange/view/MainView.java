@@ -2,8 +2,6 @@ package uk.me.ruthmills.synthexchange.view;
 
 import java.util.Set;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.flow.component.button.Button;
@@ -21,16 +19,16 @@ public class MainView extends VerticalLayout {
 
 	private static final long serialVersionUID = 1L;
 
-	@Autowired
-	private MidiService midiService;
-
 	private Grid<DeviceMapping> inputs;
 	private Grid<DeviceMapping> outputs;
 
 	private Select<String> midiInputSelect;
 	private Select<String> midiOutputSelect;
-
-	public MainView() {
+	
+	@Autowired
+	public MainView(MidiService midiService, AddInputDialog addInputDialog) {
+		Set<String> midiDevices = midiService.getMidiDevices();
+		
 		Label inputsLabel = new Label("Inputs");
 		add(inputsLabel);
 
@@ -40,6 +38,7 @@ public class MainView extends VerticalLayout {
 		add(inputs);
 
 		Button addInputButton = new Button("Add Input");
+		addInputButton.addClickListener(event -> addInputDialog.open());
 		add(addInputButton);
 
 		Label outputsLabel = new Label("Outputs");
@@ -55,17 +54,12 @@ public class MainView extends VerticalLayout {
 
 		midiInputSelect = new Select<>();
 		midiInputSelect.setLabel("MIDI Input");
+		midiInputSelect.setItems(midiDevices);
 		add(midiInputSelect);
 
 		midiOutputSelect = new Select<>();
 		midiOutputSelect.setLabel("MIDI Output");
-		add(midiOutputSelect);
-	}
-
-	@PostConstruct
-	public void initialise() {
-		Set<String> midiDevices = midiService.getMidiDevices();
-		midiInputSelect.setItems(midiDevices);
 		midiOutputSelect.setItems(midiDevices);
+		add(midiOutputSelect);
 	}
 }
