@@ -1,6 +1,8 @@
 {
 	"manufacturer": "Generic",
 	"model": "MIDI CC",
+	"input": true,
+	"output": true,
 	"type": "midi",
 	"format": "B${channel}${parameter}${value}",
 	"parameters": [

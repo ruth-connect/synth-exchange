@@ -10,6 +10,8 @@ public abstract class Device {
 
 	private String manufacturer;
 	private String type;
+	private boolean input;
+	private boolean output;
 
 	public String getManufacturer() {
 		return manufacturer;
@@ -29,5 +31,21 @@ public abstract class Device {
 	
 	public String getName() {
 		return manufacturer;
+	}
+
+	public boolean isInput() {
+		return input;
+	}
+
+	public void setInput(boolean input) {
+		this.input = input;
+	}
+
+	public boolean isOutput() {
+		return output;
+	}
+
+	public void setOutput(boolean output) {
+		this.output = output;
 	}
 }
