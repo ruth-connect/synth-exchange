@@ -6,5 +6,7 @@ import javax.sound.midi.MidiDevice;
 
 public interface MidiAdapter {
 
-	public List<MidiDevice.Info> getMidiDevices();
+	public List<MidiDevice.Info> getMidiInputs();
+	
+	public List<MidiDevice.Info> getMidiOutputs();
 }

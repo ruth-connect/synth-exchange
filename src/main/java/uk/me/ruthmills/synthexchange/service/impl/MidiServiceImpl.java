@@ -18,7 +18,13 @@ public class MidiServiceImpl implements MidiService {
 	@Autowired
 	private MidiAdapter midiAdapter;
 
-	public List<MidiDevice.Info> getMidiDevices() {
-		return midiAdapter.getMidiDevices().stream().sorted(Comparator.comparing(MidiDevice.Info::getName)).collect(Collectors.toList());
+	@Override
+	public List<MidiDevice.Info> getMidiInputs() {
+		return midiAdapter.getMidiInputs().stream().sorted(Comparator.comparing(MidiDevice.Info::getName)).collect(Collectors.toList());
+	}
+
+	@Override
+	public List<MidiDevice.Info> getMidiOutputs() {
+		return midiAdapter.getMidiOutputs().stream().sorted(Comparator.comparing(MidiDevice.Info::getName)).collect(Collectors.toList());
 	}
 }

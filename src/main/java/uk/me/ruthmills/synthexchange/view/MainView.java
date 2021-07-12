@@ -28,9 +28,7 @@ public class MainView extends VerticalLayout {
 	private Select<MidiDevice.Info> midiOutputSelect;
 	
 	@Autowired
-	public MainView(MidiService midiService, AddInputDialog addInputDialog) {
-		List<MidiDevice.Info> midiDevices = midiService.getMidiDevices();
-		
+	public MainView(MidiService midiService, AddInputDialog addInputDialog) {		
 		Label inputsLabel = new Label("Inputs");
 		add(inputsLabel);
 
@@ -57,12 +55,12 @@ public class MainView extends VerticalLayout {
 		midiInputSelect = new Select<>();
 		midiInputSelect.setLabel("MIDI Input");
 		midiInputSelect.setItemLabelGenerator(MidiDevice.Info::getName);
-		midiInputSelect.setItems(midiDevices);
+		midiInputSelect.setItems(midiService.getMidiInputs());
 		add(midiInputSelect);
 
 		midiOutputSelect = new Select<>();
 		midiOutputSelect.setLabel("MIDI Output");
-		midiOutputSelect.setItems(midiDevices);
+		midiOutputSelect.setItems(midiService.getMidiOutputs());
 		midiOutputSelect.setItemLabelGenerator(MidiDevice.Info::getName);
 		add(midiOutputSelect);
 	}
