@@ -3,6 +3,8 @@ package uk.me.ruthmills.synthexchange.view;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.flow.component.Text;
@@ -28,6 +30,7 @@ public class AddInputDialog extends Dialog {
 
 	private static final long serialVersionUID = 1L;
 
+	private MidiService midiService;
 	private DeviceMappingService deviceMappingService;
 
 	private FormLayout formLayout;
@@ -37,10 +40,12 @@ public class AddInputDialog extends Dialog {
 	private Button addInputButton;
 	private Button cancelButton;
 
+	private static final Logger logger = LoggerFactory.getLogger(AddInputDialog.class);
+
 	@Autowired
 	public AddInputDialog(MidiService midiService, DeviceService deviceService,
 			DeviceMappingService deviceMappingService) {
-
+		this.midiService = midiService;
 		this.deviceMappingService = deviceMappingService;
 		this.setWidth("400px");
 
@@ -87,6 +92,12 @@ public class AddInputDialog extends Dialog {
 				deviceMapping.setModel(midiDevice.getModel());
 				deviceMapping.setConnection(midiInterfaceSelect.getValue().getName());
 				deviceMapping.setChannel(midiChannelSelect.getValue().toString());
+
+				try {
+					midiService.openMidiInput(midiInterfaceSelect.getValue());
+				} catch (Exception ex) {
+					logger.error("Failed to open MIDI input: " + midiInterfaceSelect.getValue().getName(), ex);
+				}
 			}
 
 			deviceMappingService.addInput(deviceMapping);
