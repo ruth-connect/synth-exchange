@@ -49,11 +49,15 @@ public class MidiAdapterImpl implements MidiAdapter {
 
 	@Override
 	public Transmitter openMidiInput(MidiDevice.Info midiInputInfo) throws MidiUnavailableException {
-		return MidiSystem.getMidiDevice(midiInputInfo).getTransmitter();
+		MidiDevice midiInput = MidiSystem.getMidiDevice(midiInputInfo);
+		midiInput.open();
+		return midiInput.getTransmitter();
 	}
 
 	@Override
 	public Receiver openMidiOutput(MidiDevice.Info midiOutputInfo) throws MidiUnavailableException {
-		return MidiSystem.getMidiDevice(midiOutputInfo).getReceiver();
+		MidiDevice midiOutput = MidiSystem.getMidiDevice(midiOutputInfo);
+		midiOutput.open();
+		return midiOutput.getReceiver();
 	}
 }
