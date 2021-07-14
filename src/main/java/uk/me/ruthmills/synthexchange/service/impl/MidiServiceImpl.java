@@ -46,7 +46,7 @@ public class MidiServiceImpl implements MidiService {
 	public void openMidiInput(MidiDevice.Info midiInputInfo) throws MidiUnavailableException {
 		MidiInput midiInput = midiInputs.get(midiInputInfo);
 		if (midiInput == null) {
-			midiInput = synthExchangeConfig.createMidiInputThread(midiInputInfo);
+			midiInput = synthExchangeConfig.createMidiInput(midiInputInfo);
 			midiInput.open();
 			midiInputs.put(midiInputInfo, midiInput);
 		}
@@ -56,7 +56,7 @@ public class MidiServiceImpl implements MidiService {
 	public void openMidiOutput(MidiDevice.Info midiOutputInfo) throws MidiUnavailableException {
 		MidiOutput midiOutput = midiOutputs.get(midiOutputInfo);
 		if (midiOutput == null) {
-			midiOutput = synthExchangeConfig.createMidiOutputThread(midiOutputInfo);
+			midiOutput = synthExchangeConfig.createMidiOutput(midiOutputInfo);
 			midiOutput.open();
 			midiOutputs.put(midiOutputInfo, midiOutput);
 		}
