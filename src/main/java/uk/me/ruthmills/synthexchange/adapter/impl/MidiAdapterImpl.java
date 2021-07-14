@@ -8,6 +8,7 @@ import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiDeviceReceiver;
 import javax.sound.midi.MidiDeviceTransmitter;
 import javax.sound.midi.MidiSystem;
+import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Receiver;
 import javax.sound.midi.Transmitter;
 
@@ -37,12 +38,22 @@ public class MidiAdapterImpl implements MidiAdapter {
 	@Override
 	public List<MidiDevice.Info> getMidiOutputs() {
 		return Arrays.asList(MidiSystem.getMidiDeviceInfo()).stream().filter(output -> {
-			try (Receiver receiver = MidiSystem.getMidiDevice(output).getReceiver()){
+			try (Receiver receiver = MidiSystem.getMidiDevice(output).getReceiver()) {
 				return receiver instanceof MidiDeviceReceiver;
 			} catch (Exception ex) {
 				logger.info("Midi Output Unavailable: " + output);
 				return false;
 			}
 		}).collect(Collectors.toList());
+	}
+
+	@Override
+	public Transmitter openMidiInput(MidiDevice.Info midiInputInfo) throws MidiUnavailableException {
+		return MidiSystem.getMidiDevice(midiInputInfo).getTransmitter();
+	}
+
+	@Override
+	public Receiver openMidiOutput(MidiDevice.Info midiOutputInfo) throws MidiUnavailableException {
+		return MidiSystem.getMidiDevice(midiOutputInfo).getReceiver();
 	}
 }
