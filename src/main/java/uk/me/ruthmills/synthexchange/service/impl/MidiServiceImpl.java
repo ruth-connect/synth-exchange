@@ -47,7 +47,7 @@ public class MidiServiceImpl implements MidiService {
 		MidiInput midiInput = midiInputs.get(midiInputInfo);
 		if (midiInput == null) {
 			midiInput = synthExchangeConfig.createMidiInputThread(midiInputInfo);
-			midiInput.initialise();
+			midiInput.open();
 			midiInputs.put(midiInputInfo, midiInput);
 		}
 	}
@@ -57,18 +57,26 @@ public class MidiServiceImpl implements MidiService {
 		MidiOutput midiOutput = midiOutputs.get(midiOutputInfo);
 		if (midiOutput == null) {
 			midiOutput = synthExchangeConfig.createMidiOutputThread(midiOutputInfo);
-			midiOutput.initialise();
+			midiOutput.open();
 			midiOutputs.put(midiOutputInfo, midiOutput);
 		}
 	}
 
 	@Override
 	public void closeMidiInput(MidiDevice.Info midiInputInfo) {
-
+		MidiInput midiInput = midiInputs.get(midiInputInfo);
+		if (midiInput != null) {
+			midiInput.close();
+			midiInputs.remove(midiInputInfo);
+		}
 	}
 
 	@Override
 	public void closeMidiOutput(MidiDevice.Info midiOutputInfo) {
-
+		MidiOutput midiOutput = midiOutputs.get(midiOutputInfo);
+		if (midiOutput != null) {
+			midiOutput.close();
+			midiOutputs.remove(midiOutputInfo);
+		}
 	}
 }

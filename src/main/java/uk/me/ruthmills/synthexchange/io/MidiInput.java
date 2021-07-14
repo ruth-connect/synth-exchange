@@ -1,6 +1,5 @@
 package uk.me.ruthmills.synthexchange.io;
 
-import javax.annotation.PostConstruct;
 import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiMessage;
 import javax.sound.midi.MidiUnavailableException;
@@ -32,8 +31,7 @@ public class MidiInput implements Receiver {
 		this.midiInputInfo = midiInputInfo;
 	}
 
-	@PostConstruct
-	public void initialise() throws MidiUnavailableException {
+	public void open() throws MidiUnavailableException {
 		midiInput = midiAdapter.openMidiInput(midiInputInfo);
 		midiInput.setReceiver(this);
 		logger.info("Created MIDI input for: " + midiInputInfo.getName());
@@ -51,5 +49,6 @@ public class MidiInput implements Receiver {
 	@Override
 	public void close() {
 		midiInput.close();
+		midiInput = null;
 	}
 }
