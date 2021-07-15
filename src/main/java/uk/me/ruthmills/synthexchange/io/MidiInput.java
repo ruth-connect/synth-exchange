@@ -2,6 +2,7 @@ package uk.me.ruthmills.synthexchange.io;
 
 import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiMessage;
+import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Receiver;
 import javax.sound.midi.ShortMessage;

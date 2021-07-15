@@ -15,7 +15,7 @@ public class SynthExchangeConfig {
 
 	@Bean
 	@Scope(BeanDefinition.SCOPE_PROTOTYPE)
-	public MidiInput createMidiInputThread(MidiDevice.Info midiInputInfo) {
+	public MidiInput createMidiInput(MidiDevice.Info midiInputInfo) {
 		{
 			return new MidiInput(midiInputInfo);
 		}
@@ -23,7 +23,7 @@ public class SynthExchangeConfig {
 
 	@Bean
 	@Scope(BeanDefinition.SCOPE_PROTOTYPE)
-	public MidiOutput createMidiOutputThread(MidiDevice.Info midiOutputInfo) {
+	public MidiOutput createMidiOutput(MidiDevice.Info midiOutputInfo) {
 		{
 			return new MidiOutput(midiOutputInfo);
 		}
