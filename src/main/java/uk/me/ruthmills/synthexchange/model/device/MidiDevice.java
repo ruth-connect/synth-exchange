@@ -5,6 +5,7 @@ import java.util.List;
 public class MidiDevice extends Device {
 
 	private String model;
+	private String match;
 	private String format;
 	private List<MidiParameter> parameters;
 
@@ -19,7 +20,15 @@ public class MidiDevice extends Device {
 	public String getName() {
 		return getManufacturer() + " - " + model;
 	}
-	
+
+	public String getMatch() {
+		return match;
+	}
+
+	public void setMatch(String match) {
+		this.match = match;
+	}
+
 	public String getFormat() {
 		return format;
 	}
@@ -34,5 +43,9 @@ public class MidiDevice extends Device {
 
 	public void setParameters(List<MidiParameter> parameters) {
 		this.parameters = parameters;
+	}
+
+	public boolean matches(String hex, String channel) {
+		return hex.startsWith(match.replace("$channel", channel));
 	}
 }

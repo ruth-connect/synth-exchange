@@ -12,6 +12,10 @@ public interface DeviceMappingService {
 
 	public List<DeviceMapping> getOutputs();
 
+	public List<DeviceMapping> getInputs(String connection);
+
+	public List<DeviceMapping> getOutputs(String connection);
+
 	public ListDataProvider<DeviceMapping> getInputDataProvider();
 
 	public ListDataProvider<DeviceMapping> getOutputDataProvider();

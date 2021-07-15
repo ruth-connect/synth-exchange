@@ -1,11 +1,14 @@
 package uk.me.ruthmills.synthexchange.model.mapping;
 
+import uk.me.ruthmills.synthexchange.model.device.Device;
+
 public class DeviceMapping {
 
 	private String manufacturer;
 	private String model;
 	private String connection;
 	private String channel;
+	private Device device;
 
 	public String getManufacturer() {
 		return manufacturer;
@@ -37,5 +40,13 @@ public class DeviceMapping {
 
 	public void setChannel(String channel) {
 		this.channel = channel;
+	}
+
+	public Device getDevice() {
+		return device;
+	}
+
+	public void setDevice(Device device) {
+		this.device = device;
 	}
 }

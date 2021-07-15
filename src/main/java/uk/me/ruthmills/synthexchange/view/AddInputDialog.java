@@ -92,6 +92,7 @@ public class AddInputDialog extends Dialog {
 				deviceMapping.setModel(midiDevice.getModel());
 				deviceMapping.setConnection(midiInterfaceSelect.getValue().getName());
 				deviceMapping.setChannel(midiChannelSelect.getValue().toString());
+				deviceMapping.setDevice(device);
 
 				try {
 					midiService.openMidiInput(midiInterfaceSelect.getValue());
