@@ -4,6 +4,8 @@ import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiMessage;
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Receiver;
+import javax.sound.midi.ShortMessage;
+import javax.sound.midi.SysexMessage;
 import javax.sound.midi.Transmitter;
 
 import org.slf4j.Logger;
@@ -14,6 +16,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import uk.me.ruthmills.synthexchange.adapter.MidiAdapter;
+import uk.me.ruthmills.synthexchange.service.MidiMappingService;
 
 @Component
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
@@ -21,6 +24,9 @@ public class MidiInput implements Receiver {
 
 	@Autowired
 	private MidiAdapter midiAdapter;
+
+	@Autowired
+	private MidiMappingService midiMappingService;
 
 	private MidiDevice.Info midiInputInfo;
 	private Transmitter midiInput;
@@ -43,7 +49,13 @@ public class MidiInput implements Receiver {
 
 	@Override
 	public void send(MidiMessage message, long timeStamp) {
-		logger.info("MIDI Message received: " + message);
+		if (message instanceof ShortMessage) {
+			ShortMessage shortMessage = (ShortMessage) message;
+			midiMappingService.mapMidiMessage(midiInputInfo, shortMessage.getMessage(), shortMessage.getLength());
+		} else if (message instanceof SysexMessage) {
+			SysexMessage sysexMessage = (SysexMessage) message;
+			midiMappingService.mapMidiMessage(midiInputInfo, sysexMessage.getMessage(), sysexMessage.getLength());
+		}
 	}
 
 	@Override
