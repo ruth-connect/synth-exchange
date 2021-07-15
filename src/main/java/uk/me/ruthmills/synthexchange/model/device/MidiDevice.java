@@ -1,9 +1,7 @@
 package uk.me.ruthmills.synthexchange.model.device;
 
 import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.Optional;
 
 public class MidiDevice extends Device {
 
@@ -50,5 +48,11 @@ public class MidiDevice extends Device {
 
 	public boolean matches(String hex, String channel) {
 		return hex.startsWith(match.replace("${channel}", Integer.toString(Integer.parseInt(channel) - 1)));
+	}
+	
+	public Optional<MidiParameter> findParameter(String hex, String channel) {
+		return parameters.stream().filter(parameter ->
+			hex.startsWith(
+					match.replace("${channel}", Integer.toString(Integer.parseInt(channel) - 1)) + parameter.getParameter())).findFirst();
 	}
 }

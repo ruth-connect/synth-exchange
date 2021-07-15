@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import uk.me.ruthmills.synthexchange.model.device.MidiDevice;
+import uk.me.ruthmills.synthexchange.model.device.MidiParameter;
 import uk.me.ruthmills.synthexchange.model.mapping.DeviceMapping;
 import uk.me.ruthmills.synthexchange.service.DeviceMappingService;
 import uk.me.ruthmills.synthexchange.service.MidiMappingService;
@@ -33,15 +34,23 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 		List<DeviceMapping> deviceMappings = deviceMappingService.getInputs(midiInputInfo.getName());
 
 		// Find the corresponding device mapping.
-		Optional<DeviceMapping> deviceMapping = deviceMappings.stream()
+		Optional<DeviceMapping> deviceMappingOptional = deviceMappings.stream()
 				.filter(dm -> dm.getDevice() instanceof MidiDevice
 						&& ((MidiDevice) dm.getDevice()).matches(hex, dm.getChannel()))
 				.findFirst();
 		
 		// If we found a device mapping, get the MIDI device.
-		if (deviceMapping.isPresent()) {
-			MidiDevice midiDevice = (MidiDevice)deviceMapping.get().getDevice();
+		if (deviceMappingOptional.isPresent()) {
+			DeviceMapping deviceMapping = deviceMappingOptional.get();
+			MidiDevice midiDevice = (MidiDevice)deviceMapping.getDevice();
 			logger.info("Found matching MIDI device: " + midiDevice.getName());
+			
+			// If we found a matching MIDI parameter, get it.
+			Optional<MidiParameter> midiParameterOptional = midiDevice.findParameter(hex, deviceMapping.getChannel());
+			if (midiParameterOptional.isPresent()) {
+				MidiParameter midiParameter = midiParameterOptional.get();
+				logger.info("Found matching MIDI parameter: " + midiParameter.getName());
+			}
 		}
 	}
 }
