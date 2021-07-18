@@ -1,0 +1,10 @@
+{
+	"manufacturer": "Roland",
+	"model": "System 1",
+	"input": true,
+	"output": true,
+	"type": "midi",
+	"format": "B${channel}${parameter}${value}",
+	"parameters": [
+	]
+}
