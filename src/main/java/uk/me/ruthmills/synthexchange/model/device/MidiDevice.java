@@ -6,10 +6,9 @@ import java.util.Optional;
 public class MidiDevice extends Device {
 
 	private String model;
-	private String match;
 	private String format;
 	private List<MidiParameter> parameters;
-	
+
 	public String getModel() {
 		return model;
 	}
@@ -20,14 +19,6 @@ public class MidiDevice extends Device {
 
 	public String getName() {
 		return getManufacturer() + " - " + model;
-	}
-
-	public String getMatch() {
-		return match;
-	}
-
-	public void setMatch(String match) {
-		this.match = match;
 	}
 
 	public String getFormat() {
@@ -47,12 +38,15 @@ public class MidiDevice extends Device {
 	}
 
 	public boolean matches(String hex, String channel) {
-		return hex.startsWith(match.replace("${channel}", Integer.toString(Integer.parseInt(channel) - 1)));
+		return hex.startsWith(format.substring(0, format.indexOf("${parameter}")).replace("${channel}",
+				Integer.toString(Integer.parseInt(channel) - 1)));
 	}
-	
+
 	public Optional<MidiParameter> findParameter(String hex, String channel) {
-		return parameters.stream().filter(parameter ->
-			hex.startsWith(
-					match.replace("${channel}", Integer.toString(Integer.parseInt(channel) - 1)) + parameter.getParameter())).findFirst();
+		return parameters.stream()
+				.filter(parameter -> hex.startsWith(format.substring(0, format.indexOf("${value}"))
+						.replace("${channel}", Integer.toString(Integer.parseInt(channel) - 1))
+						.replace("${parameter}", parameter.getParameter())))
+				.findFirst();
 	}
 }

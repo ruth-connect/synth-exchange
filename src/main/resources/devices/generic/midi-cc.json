@@ -4,7 +4,6 @@
 	"input": true,
 	"output": true,
 	"type": "midi",
-	"match": "B${channel}",
 	"format": "B${channel}${parameter}${value}",
 	"parameters": [
 		{

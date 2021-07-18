@@ -4,7 +4,6 @@
 	"input": true,
 	"output": true,
 	"type": "midi",
-	"match": "F041360${channel}232001",
 	"format": "F041360${channel}232001${parameter}${value}F7",
 	"parameters": [
 		{
