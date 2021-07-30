@@ -88,9 +88,10 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 			logger.info("Mapping device " + mapping.getInput().getName() + " to " + mapping.getOutput().getName());
 
 			Optional<DeviceMapping> outputDeviceMappingOptional = deviceMappingService
-					.getOutput(mapping.getMapping().getOutput());
+					.getOutput(mapping.getOutput().getName());
 			if (outputDeviceMappingOptional.isPresent()) {
 				DeviceMapping outputDeviceMapping = outputDeviceMappingOptional.get();
+				logger.info("Found output device: " + outputDeviceMapping.getName());
 
 				// TODO - make this generic in terms of device, i.e. not just MIDI.
 				MidiDevice outputMidiDevice = (MidiDevice) outputDeviceMapping.getDevice();
@@ -99,7 +100,6 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 						.findParameter(inputMidiParameter.getName());
 				if (parameterMappingOptional.isPresent()) {
 
-					// We have a defined set of values specified. Convert between them.
 					ParameterToParameter parameter = parameterMappingOptional.get();
 					logger.info("Mapping parameter " + parameter.getInput() + " to " + parameter.getOutput());
 
@@ -109,6 +109,8 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 						MidiParameter outputMidiParameter = outputMidiParameterOptional.get();
 
 						if (parameter.getValues() != null && parameter.getValues().size() > 0) {
+
+							// We have a defined set of values specified. Convert between them.
 							Optional<ValueToValue> valueMappingOptional = parameter.findValue(inputMidiValue.getName());
 							if (valueMappingOptional.isPresent()) {
 								ValueToValue value = valueMappingOptional.get();

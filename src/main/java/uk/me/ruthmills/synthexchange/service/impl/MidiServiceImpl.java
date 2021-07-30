@@ -45,7 +45,7 @@ public class MidiServiceImpl implements MidiService {
 
 	@Override
 	public MidiOutput getMidiOutput(String name) {
-		Optional<MidiDevice.Info> midiOutputInfoOptional = midiAdapter.getMidiOutputs().stream()
+		Optional<MidiDevice.Info> midiOutputInfoOptional = midiOutputs.keySet().stream()
 				.filter(output -> output.getName().equals(name)).findFirst();
 		if (midiOutputInfoOptional.isPresent()) {
 			return midiOutputs.get(midiOutputInfoOptional.get());

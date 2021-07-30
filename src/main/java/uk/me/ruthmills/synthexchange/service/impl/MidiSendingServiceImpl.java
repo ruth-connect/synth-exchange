@@ -43,6 +43,7 @@ public class MidiSendingServiceImpl implements MidiSendingService {
 
 	public void sendMidiMessage(DeviceMapping deviceMapping, MidiParameter midiParameter, MidiValue midiValue)
 			throws DecoderException, InvalidMidiDataException {
+		logger.info("Finding MIDI output with name: " + deviceMapping.getConnection());
 		MidiOutput midiOutput = midiService.getMidiOutput(deviceMapping.getConnection());
 		if (midiOutput != null) {
 			MidiDevice midiDevice = (MidiDevice) deviceMapping.getDevice();
