@@ -91,8 +91,18 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 						ValueToValue value = valueMappingOptional.get();
 						logger.info("Mapping value: " + value.getInput() + " to " + value.getOutput());
 					}
-
-					// TODO - if scaling values are present, do the scaling.
+				} else if (parameter.getInputStart() != null && parameter.getOutputStart() != null
+						&& parameter.getInputEnd() != null && parameter.getOutputEnd() != null) {
+					Double inputStart = parameter.getInputStart();
+					Double outputStart = parameter.getOutputStart();
+					Double inputEnd = parameter.getInputEnd();
+					Double outputEnd = parameter.getOutputEnd();
+					
+					Double input = Double.parseDouble(midiValue.getName());
+					
+					Double output = 0d;
+					
+					logger.info("Mapping value: " + midiValue.getName() + " to " + output);
 				} else {
 					logger.info("Mapping value: " + midiValue.getName() + " to " + midiValue.getName());
 				}
