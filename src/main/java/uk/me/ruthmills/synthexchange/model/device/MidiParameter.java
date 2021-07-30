@@ -66,12 +66,12 @@ public class MidiParameter {
 			String match = format.replace("${channel}", Integer.toString(Integer.parseInt(channel) - 1))
 					.replace("${parameter}", parameter).replace("${value}", "*");
 			int startLength = match.indexOf("*");
-			int endLength = match.length() - match.indexOf("*") + 1;
-			String valueHex = hex.substring(0, startLength);
+			int endLength = match.length() - match.indexOf("*") - 1;
+			String valueHex = hex.substring(startLength, hex.length());
 			valueHex = valueHex.substring(0, valueHex.length() - endLength);
-			int value = ByteBuffer.wrap(Hex.decodeHex(valueHex)).getInt();
-			int minValue = ByteBuffer.wrap(Hex.decodeHex(this.minValue)).getInt();
-			int maxValue = ByteBuffer.wrap(Hex.decodeHex(this.maxValue)).getInt();
+			int value = getIntValue(valueHex);
+			int minValue = getIntValue(this.minValue);
+			int maxValue = getIntValue(this.maxValue);
 			if (value < minValue) {
 				midiValue.setName(Integer.toString(minValue));
 				midiValue.setValue(this.minValue);
@@ -83,6 +83,17 @@ public class MidiParameter {
 				midiValue.setValue(valueHex);
 			}
 			return Optional.of(midiValue);
+		}
+	}
+	
+	private int getIntValue(String hex) throws DecoderException {
+		ByteBuffer byteBuffer = ByteBuffer.wrap(Hex.decodeHex(hex));
+		if (byteBuffer.capacity() == 1) {
+			return (int) byteBuffer.get();
+		} else if (byteBuffer.capacity() == 2) {
+			return (int) byteBuffer.getShort();
+		} else {
+			return byteBuffer.getInt();
 		}
 	}
 }
