@@ -6,5 +6,289 @@
 	"type": "midi",
 	"format": "B${channel}${parameter}${value}",
 	"parameters": [
+		{
+			"parameter": "23",
+			"name": "LFO Waveform",
+			"values": [
+				{
+					"value": "00",
+					"name": "Sine"
+				},
+				{
+					"value": "19",
+					"name": "Triangle"
+				},
+				{
+					"value": "33",
+					"name": "Sawtooth"
+				},
+				{
+					"value": "4C",
+					"name": "Pulse"
+				},
+				{
+					"value": "66",
+					"name": "Sample/Hold"
+				},
+				{
+					"value": "7F",
+					"name": "Random"
+				}
+			]
+		},
+		{
+			"parameter": "1A",
+			"name": "LFO Pitch Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1B",
+			"name": "LFO Fade Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1C",
+			"name": "LFO Filter Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1D",
+			"name": "LFO Rate",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1E",
+			"name": "LFO Amp Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2E",
+			"name": "OSC 1 Waveform",
+			"values": [
+				{
+					"value": "00",
+					"name": "Sawtooth"	
+				},
+				{
+					"value": "19",
+					"name": "Pulse"
+				},
+				{
+					"value": "33",
+					"name": "Triangle"
+				},
+				{
+					"value": "4C",
+					"name": "Super Saw"
+				},
+				{
+					"value": "66",
+					"name": "Super Pulse"
+				},
+				{
+					"value": "7F",
+					"name": "Super Triangle"
+				}
+			]
+		},
+		{
+			"parameter": "2F",
+			"name": "OSC 1 Range",
+			"values": [
+				{
+					"value": "00",
+					"name": "64'"
+				},
+				{
+					"value": "19",
+					"name": "32'"
+				},
+				{
+					"value": "33",
+					"name": "16'"
+				},
+				{
+					"value": "4C",
+					"name": "8'"
+				},
+				{
+					"value": "66",
+					"name": "4'"
+				},
+				{
+					"value": "7F",
+					"name": "2'"
+				}
+			]
+		},
+		{
+			"parameter": "32",
+			"name": "OSC 1 Colour",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3C",
+			"name": "OSC 1 Mod",
+			"values": [
+				{
+					"value": "00",
+					"name": "MAN"
+				},
+				{
+					"value": "19",
+					"name": "LFO"
+				},
+				{
+					"value": "33",
+					"name": "Pitch Env"
+				},
+				{
+					"value": "4C",
+					"name": "Filter Env"
+				},
+				{
+					"value": "66",
+					"name": "Amp Env"
+				},
+				{
+					"value": "7F",
+					"name": "Sub Osc"
+				}
+			]
+		},
+		{
+			"parameter": "34",
+			"name": "OSC 1 Cross Mod",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3D",
+			"name": "OSC 2 Waveform",
+			"values": [
+				{
+					"value": "00",
+					"name": "Sawtooth"	
+				},
+				{
+					"value": "19",
+					"name": "Pulse"
+				},
+				{
+					"value": "33",
+					"name": "Triangle"
+				},
+				{
+					"value": "4C",
+					"name": "Super Saw"
+				},
+				{
+					"value": "66",
+					"name": "Super Pulse"
+				},
+				{
+					"value": "7F",
+					"name": "Super Triangle"
+				}
+			]
+		},
+		{
+			"parameter": "3E",
+			"name": "OSC 2 Range",
+			"values": [
+				{
+					"value": "00",
+					"name": "64'"
+				},
+				{
+					"value": "19",
+					"name": "32'"
+				},
+				{
+					"value": "33",
+					"name": "16'"
+				},
+				{
+					"value": "4C",
+					"name": "8'"
+				},
+				{
+					"value": "66",
+					"name": "4'"
+				},
+				{
+					"value": "7F",
+					"name": "2'"
+				}
+			]
+		},
+		{
+			"parameter": "37",
+			"name": "OSC 2 Colour",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3F",
+			"name": "OSC 2 Mod",
+			"values": [
+				{
+					"value": "00",
+					"name": "MAN"
+				},
+				{
+					"value": "19",
+					"name": "LFO"
+				},
+				{
+					"value": "33",
+					"name": "Pitch Env"
+				},
+				{
+					"value": "4C",
+					"name": "Filter Env"
+				},
+				{
+					"value": "66",
+					"name": "Amp Env"
+				},
+				{
+					"value": "7F",
+					"name": "Sub Osc"
+				}
+			]
+		},
+		{
+			"parameter": "38",
+			"name": "OSC 2 Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "05",
+			"name": "Portamento",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "74",
+			"name": "Legato",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		}
 	]
 }
