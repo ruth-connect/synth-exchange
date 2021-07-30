@@ -39,39 +39,43 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 		try {
 			// Encode MIDI message to Hex.
 			String hex = Hex.encodeHexString(message).substring(0, length * 2).toUpperCase();
-			logger.info("MIDI Message received: " + hex);
-
-			// Get the device mappings to this MIDI input.
-			List<DeviceMapping> deviceMappings = deviceMappingService.getInputs(midiInputInfo.getName());
-
-			// Find the corresponding device mapping.
-			Optional<DeviceMapping> deviceMappingOptional = deviceMappings.stream()
-					.filter(dm -> dm.getDevice() instanceof MidiDevice
-							&& ((MidiDevice) dm.getDevice()).matches(hex, dm.getChannel()))
-					.findFirst();
-
-			// If we found a device mapping, get the MIDI device.
-			if (deviceMappingOptional.isPresent()) {
-				DeviceMapping deviceMapping = deviceMappingOptional.get();
-				MidiDevice midiDevice = (MidiDevice) deviceMapping.getDevice();
-				logger.info("Found matching MIDI device: " + midiDevice.getName());
-
-				// If we found a matching MIDI parameter, get it.
-				Optional<MidiParameter> midiParameterOptional = midiDevice.findParameter(hex,
-						deviceMapping.getChannel());
-				if (midiParameterOptional.isPresent()) {
-					MidiParameter midiParameter = midiParameterOptional.get();
-					logger.info("Found matching MIDI parameter: " + midiParameter.getName());
-
-					// If we found a matching MIDI value, get it.
-					Optional<MidiValue> midiValueOptional = midiParameter.findValue(midiDevice.getFormat(), hex,
+			
+			// Filter out Active Sensing (FE).
+			if (!"FE".equals(hex)) {
+				logger.info("MIDI Message received: " + hex);
+	
+				// Get the device mappings to this MIDI input.
+				List<DeviceMapping> deviceMappings = deviceMappingService.getInputs(midiInputInfo.getName());
+	
+				// Find the corresponding device mapping.
+				Optional<DeviceMapping> deviceMappingOptional = deviceMappings.stream()
+						.filter(dm -> dm.getDevice() instanceof MidiDevice
+								&& ((MidiDevice) dm.getDevice()).matches(hex, dm.getChannel()))
+						.findFirst();
+	
+				// If we found a device mapping, get the MIDI device.
+				if (deviceMappingOptional.isPresent()) {
+					DeviceMapping deviceMapping = deviceMappingOptional.get();
+					MidiDevice midiDevice = (MidiDevice) deviceMapping.getDevice();
+					logger.info("Found matching MIDI device: " + midiDevice.getName());
+	
+					// If we found a matching MIDI parameter, get it.
+					Optional<MidiParameter> midiParameterOptional = midiDevice.findParameter(hex,
 							deviceMapping.getChannel());
-					if (midiValueOptional.isPresent()) {
-						MidiValue midiValue = midiValueOptional.get();
-						logger.info("Found matching MIDI value: " + midiValue.getName());
-
-						// Map the MIDI message.
-						mapMidiMessage(deviceMapping, midiParameter, midiValue);
+					if (midiParameterOptional.isPresent()) {
+						MidiParameter midiParameter = midiParameterOptional.get();
+						logger.info("Found matching MIDI parameter: " + midiParameter.getName());
+	
+						// If we found a matching MIDI value, get it.
+						Optional<MidiValue> midiValueOptional = midiParameter.findValue(midiDevice.getFormat(), hex,
+								deviceMapping.getChannel());
+						if (midiValueOptional.isPresent()) {
+							MidiValue midiValue = midiValueOptional.get();
+							logger.info("Found matching MIDI value: " + midiValue.getName());
+	
+							// Map the MIDI message.
+							mapMidiMessage(deviceMapping, midiParameter, midiValue);
+						}
 					}
 				}
 			}
