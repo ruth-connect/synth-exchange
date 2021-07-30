@@ -1,0 +1,34 @@
+{
+	"manufacturer": "Roland",
+	"model": "TB-3",
+	"input": true,
+	"output": true,
+	"type": "midi",
+	"format": "B${channel}${parameter}${value}",
+	"parameters": [
+		{
+			"parameter": "4A",
+			"name": "Cutoff",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "47",
+			"name": "Resonance",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "10",
+			"name": "Accent",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "11",
+			"name": "Effect",
+			"minValue": "00",
+			"maxValue": "7F"
+		}
+	]
+}
