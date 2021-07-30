@@ -1,0 +1,62 @@
+{
+	"manufacturer": "Roland",
+	"model": "VT-3",
+	"input": true,
+	"output": true,
+	"type": "midi",
+	"format": "B${channel}${parameter}${value}",
+	"parameters": [
+		{
+			"parameter": "11",
+			"name": "Robot",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "12",
+			"name": "Bypass",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "0C",
+			"name": "Pitch",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0D",
+			"name": "Formant",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "10",
+			"name": "Mix Balance",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5B",
+			"name": "Reverb",
+			"minValue": "00",
+			"maxValue": "7F"
+		}
+	]
+}
