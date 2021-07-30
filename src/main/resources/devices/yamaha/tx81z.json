@@ -1,0 +1,972 @@
+{
+	"manufacturer": "Yamaha",
+	"model": "TX81Z",
+	"input": true,
+	"output": true,
+	"type": "midi",
+	"format": "F0431${channel}${parameter}${value}F7",
+	"parameters": [
+		{
+			"parameter": "1234",
+			"name": "Algorithm",
+			"values": [
+				{
+					"value": "00",
+					"name": "1"
+				},
+				{
+					"value": "01",
+					"name": "2"
+				},
+				{
+					"value": "02",
+					"name": "3"
+				},
+				{
+					"value": "03",
+					"name": "4"
+				},
+				{
+					"value": "04",
+					"name": "5"
+				},
+				{
+					"value": "05",
+					"name": "6"
+				},
+				{
+					"value": "06",
+					"name": "7"
+				},
+				{
+					"value": "07",
+					"name": "8"
+				}
+			]
+		},
+		{
+			"parameter": "1235",
+			"name": "Feedback (OP4)",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1231",
+			"name": "Operator 1 Output Level",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1217",
+			"name": "Operator 2 Output Level",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1224",
+			"name": "Operator 3 Output Level",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "120A",
+			"name": "Operator 4 Output Level",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "122D",
+			"name": "Operator 1 Rate Scaling",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "1213",
+			"name": "Operator 2 Rate Scaling",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "1220",
+			"name": "Operator 3 Rate Scaling",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "1206",
+			"name": "Operator 4 Rate Scaling",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "122C",
+			"name": "Operator 1 Level Scaling",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1212",
+			"name": "Operator 2 Level Scaling",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "121F",
+			"name": "Operator 3 Level Scaling",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1205",
+			"name": "Operator 4 Level Scaling",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1312",
+			"name": "Operator 1 Waveform",
+			"values": [
+				{
+					"value": "00",
+					"name": "W1"
+				},
+				{
+					"value": "01",
+					"name": "W2"
+				},
+				{
+					"value": "02",
+					"name": "W3"
+				},
+				{
+					"value": "03",
+					"name": "W4"
+				},
+				{
+					"value": "04",
+					"name": "W5"
+				},
+				{
+					"value": "05",
+					"name": "W6"
+				},
+				{
+					"value": "06",
+					"name": "W7"
+				},
+				{
+					"value": "07",
+					"name": "W8"
+				}				
+			]
+		},
+		{
+			"parameter": "1308",
+			"name": "Operator 2 Waveform",
+			"values": [
+				{
+					"value": "00",
+					"name": "W1"
+				},
+				{
+					"value": "01",
+					"name": "W2"
+				},
+				{
+					"value": "02",
+					"name": "W3"
+				},
+				{
+					"value": "03",
+					"name": "W4"
+				},
+				{
+					"value": "04",
+					"name": "W5"
+				},
+				{
+					"value": "05",
+					"name": "W6"
+				},
+				{
+					"value": "06",
+					"name": "W7"
+				},
+				{
+					"value": "07",
+					"name": "W8"
+				}				
+			]
+		},
+		{
+			"parameter": "130D",
+			"name": "Operator 3 Waveform",
+			"values": [
+				{
+					"value": "00",
+					"name": "W1"
+				},
+				{
+					"value": "01",
+					"name": "W2"
+				},
+				{
+					"value": "02",
+					"name": "W3"
+				},
+				{
+					"value": "03",
+					"name": "W4"
+				},
+				{
+					"value": "04",
+					"name": "W5"
+				},
+				{
+					"value": "05",
+					"name": "W6"
+				},
+				{
+					"value": "06",
+					"name": "W7"
+				},
+				{
+					"value": "07",
+					"name": "W8"
+				}				
+			]
+		},
+		{
+			"parameter": "1303",
+			"name": "Operator 4 Waveform",
+			"values": [
+				{
+					"value": "00",
+					"name": "W1"
+				},
+				{
+					"value": "01",
+					"name": "W2"
+				},
+				{
+					"value": "02",
+					"name": "W3"
+				},
+				{
+					"value": "03",
+					"name": "W4"
+				},
+				{
+					"value": "04",
+					"name": "W5"
+				},
+				{
+					"value": "05",
+					"name": "W6"
+				},
+				{
+					"value": "06",
+					"name": "W7"
+				},
+				{
+					"value": "07",
+					"name": "W8"
+				}				
+			]
+		},
+		{
+			"parameter": "130F",
+			"name": "Operator 1 Frequency Range",
+			"values": [
+				{
+					"value": "00",
+					"name": "Ratio"
+				},
+				{
+					"value": "01",
+					"name": "Fixed"
+				}
+			]
+		},
+		{
+			"parameter": "1305",
+			"name": "Operator 2 Frequency Range",
+			"values": [
+				{
+					"value": "00",
+					"name": "Ratio"
+				},
+				{
+					"value": "01",
+					"name": "Fixed"
+				}
+			]
+		},
+		{
+			"parameter": "130A",
+			"name": "Operator 3 Frequency Range",
+			"values": [
+				{
+					"value": "00",
+					"name": "Ratio"
+				},
+				{
+					"value": "01",
+					"name": "Fixed"
+				}
+			]
+		},
+		{
+			"parameter": "1300",
+			"name": "Operator 4 Frequency Range",
+			"values": [
+				{
+					"value": "00",
+					"name": "Ratio"
+				},
+				{
+					"value": "01",
+					"name": "Fixed"
+				}
+			]
+		},
+		{
+			"parameter": "1232",
+			"name": "Operator 1 Frequency (Coarse)",
+			"minValue": "00",
+			"maxValue": "3F"
+		},
+		{
+			"parameter": "1218",
+			"name": "Operator 2 Frequency (Coarse)",
+			"minValue": "00",
+			"maxValue": "3F"
+		},
+		{
+			"parameter": "1225",
+			"name": "Operator 3 Frequency (Coarse)",
+			"minValue": "00",
+			"maxValue": "3F"
+		},
+		{
+			"parameter": "120B",
+			"name": "Operator 4 Frequency (Coarse)",
+			"minValue": "00",
+			"maxValue": "3F"
+		},
+		{
+			"parameter": "1311",
+			"name": "Operator 1 Frequency (Fine)",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1307",
+			"name": "Operator 2 Frequency (Fine)",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "130C",
+			"name": "Operator 3 Frequency (Fine)",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1302",
+			"name": "Operator 4 Frequency (Fine)",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1233",
+			"name": "Operator 1 Detune",
+			"values": [
+				{
+					"value": "00",
+					"name": "-3"
+				},
+				{
+					"value": "01",
+					"name": "-2"
+				},
+				{
+					"value": "02",
+					"name": "-1"
+				},
+				{
+					"value": "03",
+					"name": "0"
+				},
+				{
+					"value": "04",
+					"name": "+1"
+				},
+				{
+					"value": "05",
+					"name": "+2"
+				},
+				{
+					"value": "06",
+					"name": "+3"
+				}
+			]
+		},
+		{
+			"parameter": "1219",
+			"name": "Operator 2 Detune",
+			"values": [
+				{
+					"value": "00",
+					"name": "-3"
+				},
+				{
+					"value": "01",
+					"name": "-2"
+				},
+				{
+					"value": "02",
+					"name": "-1"
+				},
+				{
+					"value": "03",
+					"name": "0"
+				},
+				{
+					"value": "04",
+					"name": "+1"
+				},
+				{
+					"value": "05",
+					"name": "+2"
+				},
+				{
+					"value": "06",
+					"name": "+3"
+				}
+			]
+		},
+		{
+			"parameter": "1226",
+			"name": "Operator 3 Detune",
+			"values": [
+				{
+					"value": "00",
+					"name": "-3"
+				},
+				{
+					"value": "01",
+					"name": "-2"
+				},
+				{
+					"value": "02",
+					"name": "-1"
+				},
+				{
+					"value": "03",
+					"name": "0"
+				},
+				{
+					"value": "04",
+					"name": "+1"
+				},
+				{
+					"value": "05",
+					"name": "+2"
+				},
+				{
+					"value": "06",
+					"name": "+3"
+				}
+			]
+		},
+		{
+			"parameter": "120C",
+			"name": "Operator 4 Detune",
+			"values": [
+				{
+					"value": "00",
+					"name": "-3"
+				},
+				{
+					"value": "01",
+					"name": "-2"
+				},
+				{
+					"value": "02",
+					"name": "-1"
+				},
+				{
+					"value": "03",
+					"name": "0"
+				},
+				{
+					"value": "04",
+					"name": "+1"
+				},
+				{
+					"value": "05",
+					"name": "+2"
+				},
+				{
+					"value": "06",
+					"name": "+3"
+				}
+			]
+		},
+		{
+			"parameter": "1230",
+			"name": "Operator 1 Key Velocity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1216",
+			"name": "Operator 2 Key Velocity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1223",
+			"name": "Operator 3 Key Velocity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1209",
+			"name": "Operator 4 Key Velocity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "123B",
+			"name": "LFO Waveform",
+			"values": [
+				{
+					"value": "00",
+					"name": "Sawtooth"
+				},
+				{
+					"value": "01",
+					"name": "Pulse"
+				},
+				{
+					"value": "02",
+					"name": "Triangle"
+				},
+				{
+					"value": "03",
+					"name": "Random"
+				}
+			]
+		},
+		{
+			"parameter": "1236",
+			"name": "LFO Speed",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1237",
+			"name": "LFO Delay",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "123E",
+			"name": "Transpose",
+			"minValue": "00",
+			"maxValue": "30"
+		},
+		{
+			"parameter": "1240",
+			"name": "Pitch Bend Range",
+			"minValue": "00",
+			"maxValue": "0C"
+		},
+		{
+			"parameter": "1314",
+			"name": "Reverb Rate",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "123F",
+			"name": "Mono/Poly Mode",
+			"values": [
+				{
+					"value": "00",
+					"name": "Poly Mode"
+				},
+				{
+					"value": "01",
+					"name": "Mono Mode"
+				}
+			]
+		},
+		{
+			"parameter": "1241",
+			"name": "Portamento Mode",
+			"values": [
+				{
+					"value": "00",
+					"name": "Full Time Portamento"
+				},
+				{
+					"value": "01",
+					"name": "Fingered Portamento"
+				}
+			]
+		},
+		{
+			"parameter": "1242",
+			"name": "Portamento Time",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "123C",
+			"name": "Pitch Modulation Sensitivity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1238",
+			"name": "Pitch Modulation Depth",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1247",
+			"name": "Pitch Modulation - Modulation Wheel",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1315",
+			"name": "Pitch Modulation - Foot Controller",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1249",
+			"name": "Pitch Modulation - Breath Controller",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "123D",
+			"name": "Amplitude Modulation Sensitivity",
+			"minValue": "00",
+			"maxValue": "03"
+		},
+		{
+			"parameter": "122F",
+			"name": "Amplitude Modulation - Operator 1",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "1215",
+			"name": "Amplitude Modulation - Operator 2",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "1222",
+			"name": "Amplitude Modulation - Operator 3",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "1208",
+			"name": "Amplitude Modulation - Operator 4",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "1239",
+			"name": "Amplitude Modulation Depth",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1248",
+			"name": "Amplitude Modulation - Modulation Wheel",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1316",
+			"name": "Amplitude Modulation - Foot Controller",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "124A",
+			"name": "Amplitude Modulation - Breath Controller",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "1243",
+			"name": "Volume - Foot Controller",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "124C",
+			"name": "EG Bias - Breath Controller",
+			"minValue": "00",
+			"maxValue": "63"
+		},
+		{
+			"parameter": "122E",
+			"name": "Operator 1 - EG Bias Sensitivity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1214",
+			"name": "Operator 2 - EG Bias Sensitivity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1221",
+			"name": "Operator 3 - EG Bias Sensitivity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "1207",
+			"name": "Operator 4 - EG Bias Sensitivity",
+			"minValue": "00",
+			"maxValue": "07"
+		},
+		{
+			"parameter": "124B",
+			"name": "Pitch Bias - Breath Controller",
+			"minValue": "00",
+			"maxValue": "64"
+		},
+		{
+			"parameter": "1227",
+			"name": "Operator 1 - Attack Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "1228",
+			"name": "Operator 1 - Decay 1 Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "122B",
+			"name": "Operator 1 - Decay 1 Level",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "1229",
+			"name": "Operator 1 - Decay 2 Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "122A",
+			"name": "Operator 1 - Release Rate",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "120D",
+			"name": "Operator 2 - Attack Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "120E",
+			"name": "Operator 2 - Decay 1 Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "1211",
+			"name": "Operator 2 - Decay 1 Level",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "120F",
+			"name": "Operator 2 - Decay 2 Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "1210",
+			"name": "Operator 2 - Release Rate",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "1309",
+			"name": "Operator 2 - Shift",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "48"
+				},
+				{
+					"value": "02",
+					"name": "24"
+				},
+				{
+					"value": "03",
+					"name": "12"
+				}
+			]
+		},
+		{
+			"parameter": "121A",
+			"name": "Operator 3 - Attack Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "121B",
+			"name": "Operator 3 - Decay 1 Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "121E",
+			"name": "Operator 3 - Decay 1 Level",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "121C",
+			"name": "Operator 3 - Decay 2 Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "121D",
+			"name": "Operator 3 - Release Rate",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "130E",
+			"name": "Operator 3 - Shift",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "48"
+				},
+				{
+					"value": "02",
+					"name": "24"
+				},
+				{
+					"value": "03",
+					"name": "12"
+				}
+			]
+		},
+		{
+			"parameter": "1200",
+			"name": "Operator 4 - Attack Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "1201",
+			"name": "Operator 4 - Decay 1 Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "1204",
+			"name": "Operator 4 - Decay 1 Level",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "1202",
+			"name": "Operator 4 - Decay 2 Rate",
+			"minValue": "00",
+			"maxValue": "1F"
+		},
+		{
+			"parameter": "1203",
+			"name": "Operator 4 - Release Rate",
+			"minValue": "00",
+			"maxValue": "0F"
+		},
+		{
+			"parameter": "1304",
+			"name": "Operator 4 - Shift",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "48"
+				},
+				{
+					"value": "02",
+					"name": "24"
+				},
+				{
+					"value": "03",
+					"name": "12"
+				}
+			]
+		}
+	]
+}
