@@ -235,6 +235,12 @@
 			"maxValue": "7F"
 		},
 		{
+			"parameter": "38",
+			"name": "OSC 2 Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
 			"parameter": "3F",
 			"name": "OSC 2 Mod",
 			"values": [
@@ -265,8 +271,222 @@
 			]
 		},
 		{
-			"parameter": "38",
-			"name": "OSC 2 Tune",
+			"parameter": "6F",
+			"name": "OSC 2 Ring",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "70",
+			"name": "OSC 2 Sync",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "10",
+			"name": "OSC 1 Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "11",
+			"name": "OSC 2 Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "12",
+			"name": "Sub Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "13",
+			"name": "Noise Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "71",
+			"name": "Sub Type",
+			"values": [
+				{
+					"value": "00",
+					"name": "2 Octave"
+				},
+				{
+					"value": "7F",
+					"name": "1 Octave"
+				}
+			]
+		},
+		{
+			"parameter": "72",
+			"name": "Noise Type",
+			"values": [
+				{
+					"value": "00",
+					"name": "Pink"
+				},
+				{
+					"value": "7F",
+					"name": "White"
+				}
+			]
+		},
+		{
+			"parameter": "16",
+			"name": "Pitch Env",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "17",
+			"name": "Pitch Attack",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "18",
+			"name": "Pitch Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "03",
+			"name": "Low Pass Filter Cutoff",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "09",
+			"name": "Low Pass Filter Resonance",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "51",
+			"name": "Filter Env",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "52",
+			"name": "Filter Key Follow",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "73",
+			"name": "Low Pass Filter Type",
+			"values": [
+				{
+					"value": "00",
+					"name": "24dB/octave"
+				},
+				{
+					"value": "7F",
+					"name": "12dB/octave"
+				}
+			]
+		},
+		{
+			"parameter": "4F",
+			"name": "High Pass Filter Cutoff",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "53",
+			"name": "Filter Attack",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "54",
+			"name": "Filter Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "55",
+			"name": "Filter Sustain",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "56",
+			"name": "Filter Release",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "45",
+			"name": "Tone",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0C",
+			"name": "Crusher",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "59",
+			"name": "Amp Attack",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5A",
+			"name": "Amp Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "60",
+			"name": "Amp Sustain",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "61",
+			"name": "Amp Release",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5B",
+			"name": "Reverb Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5E",
+			"name": "Delay Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0D",
+			"name": "Delay Time",
 			"minValue": "00",
 			"maxValue": "7F"
 		},
@@ -287,6 +507,52 @@
 				{
 					"value": "7F",
 					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "76",
+			"name": "Tempo Sync",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "75",
+			"name": "LFO Key Trigger",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "77",
+			"name": "Mono/Unison/Poly",
+			"values": [
+				{
+					"value": "00",
+					"name": "Poly"
+				},
+				{
+					"value": "40",
+					"name": "Mono"
+				},
+				{
+					"value": "7F",
+					"name": "Unison"
 				}
 			]
 		}
