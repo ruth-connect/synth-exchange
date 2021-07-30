@@ -1,0 +1,292 @@
+{
+	"manufacturer": "Roland",
+	"model": "TR-8",
+	"input": true,
+	"output": true,
+	"type": "midi",
+	"format": "B${channel}${parameter}${value}",
+	"parameters": [
+		{
+			"parameter": "47",
+			"name": "Accent",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5B",
+			"name": "Reverb Level",			
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "59",
+			"name": "Reverb Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "5A",
+			"name": "Reverb Gate",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "10",
+			"name": "Delay Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "11",
+			"name": "Delay Time",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "12",
+			"name": "Delay Feedback",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0C",
+			"name": "External In Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0D",
+			"name": "External In Side Chain",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "14",
+			"name": "Bass Drum Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "15",
+			"name": "Bass Drum Attack",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "16",
+			"name": "Bass Drum Comp",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "17",
+			"name": "Bass Drum Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "18",
+			"name": "Bass Drum Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "19",
+			"name": "Snare Drum Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1A",
+			"name": "Snare Drum Attack",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1B",
+			"name": "Snare Drum Comp",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1C",
+			"name": "Snare Drum Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "1D",
+			"name": "Snare Drum Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2E",
+			"name": "Low Tom Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "2F",
+			"name": "Low Tom Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "30",
+			"name": "Low Tom Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "31",
+			"name": "Mid Tom Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "32",
+			"name": "Mid Tom Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "33",
+			"name": "Mid Tom Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "34",
+			"name": "High Tom Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "35",
+			"name": "High Tom Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "36",
+			"name": "High Tom Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "37",
+			"name": "Rim Shot Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "38",
+			"name": "Rim Shot Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "39",
+			"name": "Rim Shot Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3A",
+			"name": "Hand Clap Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3B",
+			"name": "Hand Clap Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3C",
+			"name": "Hand Clap Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3D",
+			"name": "Closed Hi Hat Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3E",
+			"name": "Closed Hi Hat Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "3F",
+			"name": "Closed Hi Hat Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "50",
+			"name": "Open Hi Hat Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "51",
+			"name": "Open Hi Hat Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "52",
+			"name": "Open Hi Hat Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "53",
+			"name": "Crash Cymbal Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "54",
+			"name": "Crash Cymbal Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "55",
+			"name": "Crash Cymbal Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "56",
+			"name": "Ride Cymbal Tune",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "57",
+			"name": "Ride Cymbal Decay",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "58",
+			"name": "Ride Cymbal Level",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "09",
+			"name": "Shuffle",
+			"minValue": "00",
+			"maxValue": "7F"
+		}
+	]
+}
