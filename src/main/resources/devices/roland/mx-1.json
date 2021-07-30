@@ -1,0 +1,442 @@
+{
+	"manufacturer": "Roland",
+	"model": "MX-1",
+	"input": true,
+	"output": true,
+	"type": "midi",
+	"format": "B${channel}${parameter}${value}",
+	"parameters": [
+		{
+			"parameter": "09",
+			"name": "1/2 Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "0F",
+			"name": "3/4 Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "10",
+			"name": "5/6 Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "11",
+			"name": "DIGITAL Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "12",
+			"name": "USB 1 Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "13",
+			"name": "USB 2 Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "14",
+			"name": "USB 3 Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "15",
+			"name": "USB 4 Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "16",
+			"name": "PC Tone/Filter",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "51",
+			"name": "1/2 BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "53",
+			"name": "3/4 BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "55",
+			"name": "5/6 BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "56",
+			"name": "DIGITAL BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "57",
+			"name": "USB 1 BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "59",
+			"name": "USB 2 BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "5A",
+			"name": "USB 3 BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "60",
+			"name": "USB 4 BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "61",
+			"name": "PC BFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "39",
+			"name": "1/2 MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "3B",
+			"name": "3/4 MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "3D",
+			"name": "5/6 MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "3E",
+			"name": "DIGITAL MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "3F",
+			"name": "USB 1 MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "44",
+			"name": "USB 2 MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "45",
+			"name": "USB 3 MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "4F",
+			"name": "USB 4 MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "50",
+			"name": "PC MFX",
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "7F",
+					"name": "On"
+				}
+			]
+		},
+		{
+			"parameter": "2E",
+			"name": "1/2 Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		},
+		{
+			"parameter": "30",
+			"name": "3/4 Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		},
+		{
+			"parameter": "32",
+			"name": "5/6 Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		},
+		{
+			"parameter": "33",
+			"name": "DIGITAL Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		},
+		{
+			"parameter": "34",
+			"name": "USB 1 Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		},
+		{
+			"parameter": "35",
+			"name": "USB 2 Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		},
+		{
+			"parameter": "36",
+			"name": "USB 3 Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		},
+		{
+			"parameter": "37",
+			"name": "USB 4 Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		},
+		{
+			"parameter": "38",
+			"name": "PC Mute",
+			"values": [
+				{
+					"value": "00",
+					"name": "Unmute"
+				},
+				{
+					"value": "7F",
+					"name": "Mute"
+				}
+			]
+		}
+	]
+}
