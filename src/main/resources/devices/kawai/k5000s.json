@@ -1,0 +1,112 @@
+{
+	"manufacturer": "Kawai",
+	"model": "K5000S",
+	"input": true,
+	"output": true,
+	"type": "midi",
+	"format": "B${channel}${parameter}${value}",
+	"parameters": [
+		{
+			"parameter": "10",
+			"name": "HRM LO",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "11",
+			"name": "HRM HI",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "47",
+			"name": "EVEN/ODD",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "12",
+			"name": "FF BIAS",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "13",
+			"name": "FF SPEED",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4B",
+			"name": "FF DEPTH",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4A",
+			"name": "CUTOFF",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4D",
+			"name": "RESO",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "4C",
+			"name": "VELOCITY",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "49",
+			"name": "ATTACK",
+			"minValue": "00",
+			"maxValue": "7F"			
+		},
+		{
+			"parameter": "4E",
+			"name": "DECAY",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "48",
+			"name": "RELEASE",		
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "50",
+			"name": "USER 1",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "51",
+			"name": "USER 2",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "52",
+			"name": "USER 3",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "53",
+			"name": "USER 4",
+			"minValue": "00",
+			"maxValue": "7F"
+		},
+		{
+			"parameter": "05",
+			"name": "PORTAMENTO SPEED",
+			"minValue": "00",
+			"maxValue": "7F"
+		}
+	]
+}
