@@ -40,8 +40,8 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 			// Encode MIDI message to Hex.
 			String hex = Hex.encodeHexString(message).substring(0, length * 2).toUpperCase();
 			
-			// Filter out Active Sensing (FE).
-			if (!"FE".equals(hex)) {
+			// Filter out Midi Clock (F8) and Active Sensing (FE).
+			if (!"F8".equals(hex) && !"FE".equals(hex)) {
 				logger.info("MIDI Message received: " + hex);
 	
 				// Get the device mappings to this MIDI input.
