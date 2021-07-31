@@ -5,9 +5,18 @@ import java.util.List;
 
 public class DeviceToDevice {
 
+	private String name;
 	private String from;
 	private String to;
 	private List<ParameterToParameter> parameters = new ArrayList<>();
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public String getFrom() {
 		return from;
@@ -23,10 +32,6 @@ public class DeviceToDevice {
 
 	public void setTo(String to) {
 		this.to = to;
-	}
-
-	public String getName() {
-		return from + " -> " + to;
 	}
 
 	public List<ParameterToParameter> getParameters() {
