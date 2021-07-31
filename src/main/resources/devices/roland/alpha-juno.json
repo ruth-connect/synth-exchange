@@ -75,20 +75,84 @@
 		{
 			"parameter": "03",
 			"name": "DCO Wave Pulse",
-			"minValue": "00",
-			"maxValue": "03"
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "Pulse 1"
+				},
+				{
+					"value": "02",
+					"name":" Pulse 2"
+				},
+				{
+					"value": "03",
+					"name": "Pulse 3"
+				}
+			]
 		},
 		{
 			"parameter": "04",
 			"name": "DCO Wave Saw",
-			"minValue": "00",
-			"maxValue": "05"
+			"values": [
+				{
+					"value": "00",
+					"name": "Off"
+				},
+				{
+					"value": "01",
+					"name": "Saw 1"
+				},
+				{
+					"value": "02",
+					"name": "Saw 2"
+				},
+				{
+					"value": "03",
+					"name": "Saw 3"
+				},
+				{
+					"value": "04",
+					"name": "Saw 4"
+				},
+				{
+					"value": "05",
+					"name": "Saw 5"
+				}
+			]
 		},
 		{
 			"parameter": "05",
 			"name": "DCO Wave Sub",
-			"minValue": "00",
-			"maxValue": "05"
+			"values": [
+				{
+					"value": "00",
+					"name": "Sub 0"
+				},
+				{
+					"value": "01",
+					"name": "Sub 1"
+				},
+				{
+					"value": "02",
+					"name": "Sub 2"
+				},
+				{
+					"value": "03",
+					"name": "Sub 3"
+				},
+				{
+					"value": "04",
+					"name": "Sub 4"
+				},
+				{
+					"value": "05",
+					"name": "Sub 5"
+				}
+			]
 		},
 		{
 			"parameter": "06",
