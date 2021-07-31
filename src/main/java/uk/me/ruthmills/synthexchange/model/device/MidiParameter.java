@@ -7,10 +7,9 @@ import java.util.Optional;
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
 
-public class MidiParameter {
+public class MidiParameter extends Parameter {
 
 	private String parameter;
-	private String name;
 	private String minValue;
 	private String maxValue;
 	private List<MidiValue> values;
@@ -21,14 +20,6 @@ public class MidiParameter {
 
 	public void setParameter(String parameter) {
 		this.parameter = parameter;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getMinValue() {
@@ -85,7 +76,7 @@ public class MidiParameter {
 			return Optional.of(midiValue);
 		}
 	}
-	
+
 	private int getIntValue(String hex) throws DecoderException {
 		ByteBuffer byteBuffer = ByteBuffer.wrap(Hex.decodeHex(hex));
 		if (byteBuffer.capacity() == 1) {
