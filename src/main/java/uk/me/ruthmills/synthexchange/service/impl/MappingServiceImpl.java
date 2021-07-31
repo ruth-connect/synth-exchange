@@ -37,7 +37,7 @@ public class MappingServiceImpl implements MappingService {
 					try {
 						byte[] bytes = Files.readAllBytes(p);
 						String json = new String(bytes);
-						logger.info("Device JSON: " + json);
+						logger.info("Mapping JSON: " + json);
 						ObjectMapper mapper = new ObjectMapper();
 						return mapper.readValue(json, DeviceToDevice.class);
 					} catch (Exception ex) {

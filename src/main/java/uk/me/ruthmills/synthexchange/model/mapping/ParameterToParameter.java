@@ -1,5 +1,8 @@
 package uk.me.ruthmills.synthexchange.model.mapping;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ParameterToParameter {
 
 	private String from;
@@ -8,6 +11,7 @@ public class ParameterToParameter {
 	private Double toStart;
 	private Double fromEnd;
 	private Double toEnd;
+	private List<ValueToValue> values = new ArrayList<>();
 
 	public String getFrom() {
 		return from;
@@ -55,5 +59,13 @@ public class ParameterToParameter {
 
 	public void setToEnd(Double toEnd) {
 		this.toEnd = toEnd;
+	}
+
+	public List<ValueToValue> getValues() {
+		return values;
+	}
+
+	public void setValues(List<ValueToValue> values) {
+		this.values = values;
 	}
 }
