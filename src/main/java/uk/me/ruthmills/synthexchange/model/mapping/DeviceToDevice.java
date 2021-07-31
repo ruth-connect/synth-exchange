@@ -6,8 +6,8 @@ import java.util.List;
 public class DeviceToDevice {
 
 	private String name;
-	private String from;
-	private String to;
+	private String input;
+	private String output;
 	private List<ParameterToParameter> parameters = new ArrayList<>();
 
 	public String getName() {
@@ -18,20 +18,20 @@ public class DeviceToDevice {
 		this.name = name;
 	}
 
-	public String getFrom() {
-		return from;
+	public String getInput() {
+		return input;
 	}
 
-	public void setFrom(String from) {
-		this.from = from;
+	public void setInput(String input) {
+		this.input = input;
 	}
 
-	public String getTo() {
-		return to;
+	public String getOutput() {
+		return output;
 	}
 
-	public void setTo(String to) {
-		this.to = to;
+	public void setOutput(String output) {
+		this.output = output;
 	}
 
 	public List<ParameterToParameter> getParameters() {

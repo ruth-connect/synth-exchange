@@ -5,60 +5,60 @@ import java.util.List;
 
 public class ParameterToParameter {
 
-	private String from;
-	private String to;
-	private Double fromStart;
-	private Double toStart;
-	private Double fromEnd;
-	private Double toEnd;
+	private String input;
+	private String output;
+	private Double inputStart;
+	private Double outputStart;
+	private Double inputEnd;
+	private Double outputEnd;
 	private List<ValueToValue> values = new ArrayList<>();
 
-	public String getFrom() {
-		return from;
+	public String getInput() {
+		return input;
 	}
 
-	public void setFrom(String from) {
-		this.from = from;
+	public void setInput(String input) {
+		this.input = input;
 	}
 
-	public String getTo() {
-		return to;
+	public String getOutput() {
+		return output;
 	}
 
-	public void setTo(String to) {
-		this.to = to;
+	public void setOutput(String output) {
+		this.output = output;
 	}
 
-	public Double getFromStart() {
-		return fromStart;
+	public Double getInputStart() {
+		return inputStart;
 	}
 
-	public void setFromStart(Double fromStart) {
-		this.fromStart = fromStart;
+	public void setInputStart(Double inputStart) {
+		this.inputStart = inputStart;
 	}
 
-	public Double getToStart() {
-		return toStart;
+	public Double getOutputStart() {
+		return outputStart;
 	}
 
-	public void setToStart(Double toStart) {
-		this.toStart = toStart;
+	public void setOutputStart(Double outputStart) {
+		this.outputStart = outputStart;
 	}
 
-	public Double getFromEnd() {
-		return fromEnd;
+	public Double getInputEnd() {
+		return inputEnd;
 	}
 
-	public void setFromEnd(Double fromEnd) {
-		this.fromEnd = fromEnd;
+	public void setInputEnd(Double inputEnd) {
+		this.inputEnd = inputEnd;
 	}
 
-	public Double getToEnd() {
-		return toEnd;
+	public Double getOutputEnd() {
+		return outputEnd;
 	}
 
-	public void setToEnd(Double toEnd) {
-		this.toEnd = toEnd;
+	public void setOutputEnd(Double outputEnd) {
+		this.outputEnd = outputEnd;
 	}
 
 	public List<ValueToValue> getValues() {

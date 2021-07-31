@@ -10,6 +10,7 @@ import com.vaadin.flow.data.provider.DataProvider;
 import com.vaadin.flow.data.provider.ListDataProvider;
 
 import uk.me.ruthmills.synthexchange.model.mapping.DeviceMapping;
+import uk.me.ruthmills.synthexchange.model.mapping.Mapping;
 import uk.me.ruthmills.synthexchange.service.DeviceMappingService;
 
 @Service
@@ -17,9 +18,11 @@ public class DeviceMappingServiceImpl implements DeviceMappingService {
 
 	private List<DeviceMapping> inputs = new ArrayList<>();
 	private List<DeviceMapping> outputs = new ArrayList<>();
+	private List<Mapping> mappings = new ArrayList<>();
 
 	private ListDataProvider<DeviceMapping> inputDataProvider = DataProvider.ofCollection(inputs);
 	private ListDataProvider<DeviceMapping> outputDataProvider = DataProvider.ofCollection(outputs);
+	private ListDataProvider<Mapping> mappingDataProvider = DataProvider.ofCollection(mappings);
 
 	@Override
 	public List<DeviceMapping> getInputs() {
@@ -29,6 +32,11 @@ public class DeviceMappingServiceImpl implements DeviceMappingService {
 	@Override
 	public List<DeviceMapping> getOutputs() {
 		return outputs;
+	}
+
+	@Override
+	public List<Mapping> getMappings() {
+		return mappings;
 	}
 
 	@Override
@@ -53,6 +61,11 @@ public class DeviceMappingServiceImpl implements DeviceMappingService {
 	}
 
 	@Override
+	public ListDataProvider<Mapping> getMappingDataProvider() {
+		return mappingDataProvider;
+	}
+
+	@Override
 	public void addInput(DeviceMapping input) {
 		inputs.add(input);
 		inputDataProvider.refreshAll();
@@ -62,5 +75,11 @@ public class DeviceMappingServiceImpl implements DeviceMappingService {
 	public void addOutput(DeviceMapping output) {
 		outputs.add(output);
 		outputDataProvider.refreshAll();
+	}
+
+	@Override
+	public void addMapping(Mapping mapping) {
+		mappings.add(mapping);
+		mappingDataProvider.refreshAll();
 	}
 }

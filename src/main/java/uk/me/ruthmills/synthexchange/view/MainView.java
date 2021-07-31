@@ -9,6 +9,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 import uk.me.ruthmills.synthexchange.model.mapping.DeviceMapping;
+import uk.me.ruthmills.synthexchange.model.mapping.Mapping;
 import uk.me.ruthmills.synthexchange.service.DeviceMappingService;
 
 @Route
@@ -18,10 +19,11 @@ public class MainView extends VerticalLayout {
 
 	private Grid<DeviceMapping> inputs;
 	private Grid<DeviceMapping> outputs;
+	private Grid<Mapping> mappings;
 
 	@Autowired
 	public MainView(DeviceMappingService deviceMappingService, AddInputDialog addInputDialog,
-			AddOutputDialog addOutputDialog) {
+			AddOutputDialog addOutputDialog, AddMappingDialog addMappingDialog) {
 		Label inputsLabel = new Label("Inputs");
 		add(inputsLabel);
 
@@ -47,5 +49,18 @@ public class MainView extends VerticalLayout {
 		Button addOutputButton = new Button("Add Output");
 		addOutputButton.addClickListener(event -> addOutputDialog.open());
 		add(addOutputButton);
+
+		Label mappingsLabel = new Label("Mappings");
+		add(mappingsLabel);
+
+		mappings = new Grid<>(Mapping.class);
+		mappings.setColumns("input", "output", "mapping");
+		mappings.setDataProvider(deviceMappingService.getMappingDataProvider());
+		mappings.setHeightByRows(true);
+		add(mappings);
+
+		Button addMappingButton = new Button("Add Mapping");
+		addMappingButton.addClickListener(event -> addMappingDialog.open());
+		add(addMappingButton);
 	}
 }

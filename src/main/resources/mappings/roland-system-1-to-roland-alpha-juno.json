@@ -1,339 +1,339 @@
 {
 	"name": "Roland System 1 to Roland Alpha Juno",
-	"from": "Roland - System 1",
-	"to": "Roland - Alpha Juno",
+	"input": "Roland - System 1",
+	"output": "Roland - Alpha Juno",
 	"parameters": [
 		{
-			"from": "LFO Waveform",
-			"to": "DCO Env. Mode",
+			"input": "LFO Waveform",
+			"output": "DCO Env. Mode",
 			"values": [
 				{
-					"from": "Sine",
-					"to": "Normal"
+					"input": "Sine",
+					"output": "Normal"
 				},
 				{
-					"from": "Triangle",
-					"to": "Inverted"
+					"input": "Triangle",
+					"output": "Inverted"
 				},
 				{
-					"from": "Sawtooth",
-					"to": "Normal-Dynamic"
+					"input": "Sawtooth",
+					"output": "Normal-Dynamic"
 				},
 				{
-					"from": "Pulse",
-					"to": "Inv.-Dynamic"
+					"input": "Pulse",
+					"output": "Inv.-Dynamic"
 				}
 			]
 		},
 		{
-			"from": "OSC 1 Mod",
-			"to": "VCF Env. Mode",
+			"input": "OSC 1 Mod",
+			"output": "VCF Env. Mode",
 			"values": [
 				{
-					"from": "MAN",
-					"to": "Normal"
+					"input": "MAN",
+					"output": "Normal"
 				},
 				{
-					"from": "LFO",
-					"to": "Inverted"
+					"input": "LFO",
+					"output": "Inverted"
 				},
 				{
-					"from": "Pitch Env",
-					"to": "Normal-Dynamic"
+					"input": "Pitch Env",
+					"output": "Normal-Dynamic"
 				},
 				{
-					"from": "Filter Env",
-					"to": "Dynamic"
+					"input": "Filter Env",
+					"output": "Dynamic"
 				}
 			]
 		},
 		{
-			"from": "OSC 2 Mod",
-			"to": "VCA Env. Mode",
+			"input": "OSC 2 Mod",
+			"output": "VCA Env. Mode",
 			"values": [
 				{
-					"from": "MAN",
-					"to": "Normal"
+					"input": "MAN",
+					"output": "Normal"
 				},
 				{
-					"from": "LFO",
-					"to": "Gate"
+					"input": "LFO",
+					"output": "Gate"
 				},
 				{
-					"from": "Pitch Env",
-					"to": "Normal-Dynamic"
+					"input": "Pitch Env",
+					"output": "Normal-Dynamic"
 				},
 				{
-					"from": "Filter Env",
-					"to": "Gate-Dynamic"
+					"input": "Filter Env",
+					"output": "Gate-Dynamic"
 				}
 			]
 		},
 		{
-			"from": "OSC 1 Waveform",
-			"to": "DCO Wave Pulse",
+			"input": "OSC 1 Waveform",
+			"output": "DCO Wave Pulse",
 			"values": [
 				{
-					"from": "Sawtooth",
-					"to": "Off"
+					"input": "Sawtooth",
+					"output": "Off"
 				},
 				{
-					"from": "Pulse",
-					"to": "Pulse 1"
+					"input": "Pulse",
+					"output": "Pulse 1"
 				},
 				{
-					"from": "Triangle",
-					"to": "Pulse 2"
+					"input": "Triangle",
+					"output": "Pulse 2"
 				},
 				{
-					"from": "Super Saw",
-					"to": "Pulse 3"
+					"input": "Super Saw",
+					"output": "Pulse 3"
 				}
 			]
 		},
 		{
-			"from": "OSC 2 Waveform",
-			"to": "DCO Wave Saw",
+			"input": "OSC 2 Waveform",
+			"output": "DCO Wave Saw",
 			"values": [
 				{
-					"from": "Sawtooth",
-					"to": "Off"
+					"input": "Sawtooth",
+					"output": "Off"
 				},
 				{
-					"from": "Pulse",
-					"to": "Saw 1"
+					"input": "Pulse",
+					"output": "Saw 1"
 				},
 				{
-					"from": "Triangle",
-					"to": "Saw 2"
+					"input": "Triangle",
+					"output": "Saw 2"
 				},
 				{
-					"from": "Super Saw",
-					"to": "Saw 3"
+					"input": "Super Saw",
+					"output": "Saw 3"
 				},
 				{
-					"from": "Super Pulse",
-					"to": "Saw 4"
+					"input": "Super Pulse",
+					"output": "Saw 4"
 				},
 				{
-					"from": "Super Triangle",
-					"to": "Saw 5"
+					"input": "Super Triangle",
+					"output": "Saw 5"
 				}
 			]
 		},
 		{
-			"from": "OSC 2 Mod",
-			"to": "DCO Wave Sub",
+			"input": "OSC 2 Mod",
+			"output": "DCO Wave Sub",
 			"values": [
 				{
-					"from": "MAN",
-					"to": "Sub 0"
+					"input": "MAN",
+					"output": "Sub 0"
 				},
 				{
-					"from": "LFO",
-					"to": "Sub 1"
+					"input": "LFO",
+					"output": "Sub 1"
 				},
 				{
-					"from": "Pitch Env",
-					"to": "Sub 2"
+					"input": "Pitch Env",
+					"output": "Sub 2"
 				},
 				{
-					"from": "Filter Env",
-					"to": "Sub 3"
+					"input": "Filter Env",
+					"output": "Sub 3"
 				},
 				{
-					"from": "Amp Env",
-					"to": "Sub 4"
+					"input": "Amp Env",
+					"output": "Sub 4"
 				},
 				{
-					"from": "Sub Osc",
-					"to": "Sub 5"
+					"input": "Sub Osc",
+					"output": "Sub 5"
 				}
 			]
 		},
 		{
-			"from": "OSC 1 Range",
-			"to": "DCO Range",
+			"input": "OSC 1 Range",
+			"output": "DCO Range",
 			"values": [
 				{
-					"from": "4'",
-					"to": "4'"
+					"input": "4'",
+					"output": "4'"
 				},
 				{
-					"from": "8'",
-					"to": "8'"
+					"input": "8'",
+					"output": "8'"
 				},
 				{
-					"from": "16'",
-					"to": "16'"
+					"input": "16'",
+					"output": "16'"
 				},
 				{
-					"from": "32'",
-					"to": "32'"
+					"input": "32'",
+					"output": "32'"
 				}
 			]
 		},
 		{
-			"from": "Sub Level",
-			"to": "DCO Sub Level",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 3
+			"input": "Sub Level",
+			"output": "DCO Sub Level",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 3
 		},
 		{
-			"from": "Noise Level",
-			"to": "Noise Level",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 3
+			"input": "Noise Level",
+			"output": "Noise Level",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 3
 		},
 		{
-			"from": "High Pass Filter Cutoff",
-			"to": "HPF Cutoff",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 3
+			"input": "High Pass Filter Cutoff",
+			"output": "HPF Cutoff",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 3
 		},
 		{
-			"from": "OSC 2 Sync",
-			"to": "Chorus Switch",
+			"input": "OSC 2 Sync",
+			"output": "Chorus Switch",
 			"values": [
 				{
-					"from": "Off",
-					"to": "Off"
+					"input": "Off",
+					"output": "Off"
 				},
 				{
-					"from": "On",
-					"to": "On"
+					"input": "On",
+					"output": "On"
 				}
 			]
 		},
 		{
-			"from": "LFO Pitch Mod",
-			"to": "DCO LFO Mod"
+			"input": "LFO Pitch Mod",
+			"output": "DCO LFO Mod"
 		},
 		{
-			"from": "Pitch Env",
-			"to": "DCO Env Mod"
+			"input": "Pitch Env",
+			"output": "DCO Env Mod"
 		},
 		{
-			"from": "OSC 1 Colour",
-			"to": "DCO Aftertouch Mod",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 15
+			"input": "OSC 1 Colour",
+			"output": "DCO Aftertouch Mod",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 15
 		},
 		{
-			"from": "OSC 2 Colour",
-			"to": "DCO PWM Depth"
+			"input": "OSC 2 Colour",
+			"output": "DCO PWM Depth"
 		},
 		{
-			"from": "OSC 2 Tune",
-			"to": "DCO PWM Rate"
+			"input": "OSC 2 Tune",
+			"output": "DCO PWM Rate"
 		},
 		{
-			"from": "Low Pass Filter Cutoff",
-			"to": "VCF Cutoff"
+			"input": "Low Pass Filter Cutoff",
+			"output": "VCF Cutoff"
 		},
 		{
-			"from": "Low Pass Filter Resonance",
-			"to": "VCF Resonance"
+			"input": "Low Pass Filter Resonance",
+			"output": "VCF Resonance"
 		},
 		{
-			"from": "LFO Filter Mod",
-			"to": "VCF LFO Mod"
+			"input": "LFO Filter Mod",
+			"output": "VCF LFO Mod"
 		},
 		{
-			"from": "Filter Env",
-			"to": "VCF ENV Mod"
+			"input": "Filter Env",
+			"output": "VCF ENV Mod"
 		},
 		{
-			"from": "Filter Key Follow",
-			"to": "VCF Key Follow",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 15
+			"input": "Filter Key Follow",
+			"output": "VCF Key Follow",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 15
 		},
 		{
-			"from": "Pitch Attack",
-			"to": "VCF Aftertouch",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 15
+			"input": "Pitch Attack",
+			"output": "VCF Aftertouch",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 15
 		},
 		{
-			"from": "Tone",
-			"to": "VCA Level"
+			"input": "Tone",
+			"output": "VCA Level"
 		},
 		{
-			"from": "Pitch Decay",
-			"to": "VCA Aftertouch",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 15
+			"input": "Pitch Decay",
+			"output": "VCA Aftertouch",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 15
 		},
 		{
-			"from": "LFO Rate",
-			"to": "LFO Rate"
+			"input": "LFO Rate",
+			"output": "LFO Rate"
 		},
 		{
-			"from": "LFO Fade Time",
-			"to": "LFO Delay"
+			"input": "LFO Fade Time",
+			"output": "LFO Delay"
 		},
 		{
-			"from": "Filter Attack",
-			"to": "ENV T1 - Attack Time"
+			"input": "Filter Attack",
+			"output": "ENV T1 - Attack Time"
 		},
 		{
-			"from": "Amp Attack",
-			"to": "ENV L1 - Attack Level"
+			"input": "Amp Attack",
+			"output": "ENV L1 - Attack Level"
 		},
 		{
-			"from": "Filter Decay",
-			"to": "ENV T2 - Break Time"
+			"input": "Filter Decay",
+			"output": "ENV T2 - Break Time"
 		},
 		{
-			"from": "Amp Decay",
-			"to": "ENV L2 - Break Level"
+			"input": "Amp Decay",
+			"output": "ENV L2 - Break Level"
 		},
 		{
-			"from": "Filter Sustain",
-			"to": "ENV T3 - Decay Time"
+			"input": "Filter Sustain",
+			"output": "ENV T3 - Decay Time"
 		},
 		{
-			"from": "Amp Sustain",
-			"to": "ENV L3 - Sustain Level"
+			"input": "Amp Sustain",
+			"output": "ENV L3 - Sustain Level"
 		},
 		{
-			"from": "Filter Release",
-			"to": "ENV T4 - Release Time"
+			"input": "Filter Release",
+			"output": "ENV T4 - Release Time"
 		},
 		{
-			"from": "Amp Release",
-			"to": "ENV Key Follow",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 15
+			"input": "Amp Release",
+			"output": "ENV Key Follow",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 15
 		},
 		{
-			"from": "Delay Time",
-			"to": "Chorus Rate"
+			"input": "Delay Time",
+			"output": "Chorus Rate"
 		},
 		{
-			"from": "Portamento",
-			"to": "Pitch Bender Range",
-			"fromStart": 0,
-			"toStart": 0,
-			"fromEnd": 127,
-			"toEnd": 12
+			"input": "Portamento",
+			"output": "Pitch Bender Range",
+			"inputStart": 0,
+			"outputStart": 0,
+			"inputEnd": 127,
+			"outputEnd": 12
 		}
 	]
 }

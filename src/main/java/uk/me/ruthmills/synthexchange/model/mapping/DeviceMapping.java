@@ -49,4 +49,20 @@ public class DeviceMapping {
 	public void setDevice(Device device) {
 		this.device = device;
 	}
+
+	public String getName() {
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(manufacturer);
+		if (model != null) {
+			stringBuilder.append(" ");
+			stringBuilder.append(model);
+		}
+		stringBuilder.append(" - ");
+		stringBuilder.append(connection);
+		if (channel != null) {
+			stringBuilder.append(" channel ");
+			stringBuilder.append(channel);
+		}
+		return stringBuilder.toString();
+	}
 }
