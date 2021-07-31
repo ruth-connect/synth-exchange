@@ -41,4 +41,8 @@ public class DeviceToDevice {
 	public void setParameters(List<ParameterToParameter> parameters) {
 		this.parameters = parameters;
 	}
+
+	public String toString() {
+		return name;
+	}
 }

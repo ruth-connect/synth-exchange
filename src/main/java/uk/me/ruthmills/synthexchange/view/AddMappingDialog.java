@@ -37,7 +37,7 @@ public class AddMappingDialog extends Dialog {
 	public AddMappingDialog(MappingService mappingService, DeviceMappingService deviceMappingService) {
 
 		this.deviceMappingService = deviceMappingService;
-		this.setWidth("400px");
+		this.setWidth("600px");
 
 		formLayout = new FormLayout();
 		formLayout.setResponsiveSteps(new ResponsiveStep("0", 1, LabelsPosition.TOP));
@@ -70,6 +70,13 @@ public class AddMappingDialog extends Dialog {
 
 		cancelButton = new Button("Cancel", e -> cancel());
 		formLayout.add(cancelButton);
+	}
+
+	@Override
+	public void open() {
+		inputSelect.setItems(deviceMappingService.getInputs());
+		outputSelect.setItems(deviceMappingService.getOutputs());
+		super.open();
 	}
 
 	private void addMapping() {

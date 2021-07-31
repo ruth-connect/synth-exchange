@@ -60,8 +60,19 @@ public class DeviceMapping {
 		stringBuilder.append(" - ");
 		stringBuilder.append(connection);
 		if (channel != null) {
-			stringBuilder.append(" channel ");
+			stringBuilder.append(" (channel ");
 			stringBuilder.append(channel);
+			stringBuilder.append(")");
+		}
+		return stringBuilder.toString();
+	}
+
+	public String toString() {
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(manufacturer);
+		if (model != null) {
+			stringBuilder.append(" ");
+			stringBuilder.append(model);
 		}
 		return stringBuilder.toString();
 	}
