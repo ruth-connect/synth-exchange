@@ -25,6 +25,10 @@ public class DeviceToDevice {
 		this.to = to;
 	}
 
+	public String getName() {
+		return from + " -> " + to;
+	}
+
 	public List<ParameterToParameter> getParameters() {
 		return parameters;
 	}
