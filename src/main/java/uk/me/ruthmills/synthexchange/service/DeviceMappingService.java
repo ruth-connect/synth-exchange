@@ -19,6 +19,8 @@ public interface DeviceMappingService {
 
 	public List<DeviceMapping> getOutputs(String connection);
 
+	public List<Mapping> getMappings(DeviceMapping deviceMapping);
+
 	public ListDataProvider<DeviceMapping> getInputDataProvider();
 
 	public ListDataProvider<DeviceMapping> getOutputDataProvider();

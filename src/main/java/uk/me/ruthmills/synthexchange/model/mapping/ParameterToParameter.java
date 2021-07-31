@@ -2,6 +2,7 @@ package uk.me.ruthmills.synthexchange.model.mapping;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ParameterToParameter {
 
@@ -67,5 +68,9 @@ public class ParameterToParameter {
 
 	public void setValues(List<ValueToValue> values) {
 		this.values = values;
+	}
+
+	public Optional<ValueToValue> findValue(String name) {
+		return values.stream().filter(value -> value.getInput().equals(name)).findFirst();
 	}
 }

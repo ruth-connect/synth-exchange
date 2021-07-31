@@ -2,6 +2,7 @@ package uk.me.ruthmills.synthexchange.model.mapping;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class DeviceToDevice {
 
@@ -44,5 +45,9 @@ public class DeviceToDevice {
 
 	public String toString() {
 		return name;
+	}
+
+	public Optional<ParameterToParameter> findParameter(String name) {
+		return parameters.stream().filter(parameter -> parameter.getInput().equals(name)).findFirst();
 	}
 }

@@ -51,6 +51,12 @@ public class DeviceMappingServiceImpl implements DeviceMappingService {
 	}
 
 	@Override
+	public List<Mapping> getMappings(DeviceMapping deviceMapping) {
+		return mappings.stream().filter(mapping -> deviceMapping.getName().equals(mapping.getInput().getName()))
+				.collect(Collectors.toList());
+	}
+
+	@Override
 	public ListDataProvider<DeviceMapping> getInputDataProvider() {
 		return inputDataProvider;
 	}
