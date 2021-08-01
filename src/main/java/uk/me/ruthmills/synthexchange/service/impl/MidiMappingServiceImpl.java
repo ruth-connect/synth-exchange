@@ -110,16 +110,16 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 						input = inputEnd;
 					}
 
-					Double output = (Math.abs(input - inputStart) / (Math.abs(inputEnd - inputStart) + 1))
+					Double outputDouble = (Math.abs(input - inputStart) / (Math.abs(inputEnd - inputStart) + 1))
 							* (Math.abs(outputEnd - outputStart) + 1);
 					if ((inputEnd > inputStart && outputEnd < outputStart)
 							|| (inputEnd < inputStart && outputEnd > outputStart)) {
-						output = Math.abs(Math.abs(outputEnd - outputStart) - output);
+						outputDouble = Math.abs(Math.abs(outputEnd - outputStart) - outputDouble);
 					}
 
-					String outputString = Integer.toString((int) Math.floor(output));
+					int output = (int) Math.floor(outputDouble);
 
-					logger.info("Mapping value: " + midiValue.getName() + " to " + outputString);
+					logger.info("Mapping value: " + midiValue.getName() + " to " + output);
 				} else {
 
 					// No conversion required. Pass the input to the output verbatim.
