@@ -82,6 +82,8 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 			Optional<ParameterToParameter> parameterMappingOptional = mapping.getMapping()
 					.findParameter(midiParameter.getName());
 			if (parameterMappingOptional.isPresent()) {
+
+				// We have a defined set of values specified. Convert between them.
 				ParameterToParameter parameter = parameterMappingOptional.get();
 				logger.info("Mapping parameter " + parameter.getInput() + " to " + parameter.getOutput());
 
@@ -93,17 +95,34 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 					}
 				} else if (parameter.getInputStart() != null && parameter.getOutputStart() != null
 						&& parameter.getInputEnd() != null && parameter.getOutputEnd() != null) {
+
+					// We have a scaling range specified. Scale the input to the output.
 					Double inputStart = parameter.getInputStart();
 					Double outputStart = parameter.getOutputStart();
 					Double inputEnd = parameter.getInputEnd();
 					Double outputEnd = parameter.getOutputEnd();
-					
+
 					Double input = Double.parseDouble(midiValue.getName());
-					
-					Double output = 0d;
-					
-					logger.info("Mapping value: " + midiValue.getName() + " to " + output);
+					if (input < inputStart) {
+						input = inputStart;
+					}
+					if (input > inputEnd) {
+						input = inputEnd;
+					}
+
+					Double output = (Math.abs(input - inputStart) / (Math.abs(inputEnd - inputStart) + 1))
+							* (Math.abs(outputEnd - outputStart) + 1);
+					if ((inputEnd > inputStart && outputEnd < outputStart)
+							|| (inputEnd < inputStart && outputEnd > outputStart)) {
+						output = Math.abs(Math.abs(outputEnd - outputStart) - output);
+					}
+
+					String outputString = Integer.toString((int) Math.floor(output));
+
+					logger.info("Mapping value: " + midiValue.getName() + " to " + outputString);
 				} else {
+
+					// No conversion required. Pass the input to the output verbatim.
 					logger.info("Mapping value: " + midiValue.getName() + " to " + midiValue.getName());
 				}
 			}
