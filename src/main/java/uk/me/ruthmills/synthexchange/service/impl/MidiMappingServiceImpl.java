@@ -3,6 +3,9 @@ package uk.me.ruthmills.synthexchange.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import javax.sound.midi.InvalidMidiDataException;
+
+import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -78,7 +81,7 @@ public class MidiMappingServiceImpl implements MidiMappingService {
 	}
 
 	private void mapMidiMessage(DeviceMapping inputDeviceMapping, MidiParameter inputMidiParameter,
-			MidiValue inputMidiValue) {
+			MidiValue inputMidiValue) throws DecoderException, InvalidMidiDataException {
 		List<Mapping> mappings = deviceMappingService.getMappings(inputDeviceMapping);
 		for (Mapping mapping : mappings) {
 			logger.info("Found mapping: " + mapping.getMapping().getName());

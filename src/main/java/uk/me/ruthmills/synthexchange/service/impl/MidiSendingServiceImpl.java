@@ -1,11 +1,16 @@
 package uk.me.ruthmills.synthexchange.service.impl;
 
-import java.util.Optional;
+import javax.sound.midi.InvalidMidiDataException;
+import javax.sound.midi.MidiMessage;
+import javax.sound.midi.ShortMessage;
+import javax.sound.midi.SysexMessage;
 
+import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import uk.me.ruthmills.synthexchange.io.MidiOutput;
 import uk.me.ruthmills.synthexchange.model.device.MidiDevice;
 import uk.me.ruthmills.synthexchange.model.device.MidiParameter;
 import uk.me.ruthmills.synthexchange.model.device.MidiValue;
@@ -19,7 +24,8 @@ public class MidiSendingServiceImpl implements MidiSendingService {
 	@Autowired
 	public MidiService midiService;
 
-	public void sendMidiMessage(DeviceMapping deviceMapping, MidiParameter midiParameter, String value) {
+	public void sendMidiMessage(DeviceMapping deviceMapping, MidiParameter midiParameter, String value)
+			throws DecoderException, InvalidMidiDataException {
 		MidiValue midiValue = new MidiValue();
 		midiValue.setName(value);
 
@@ -31,12 +37,27 @@ public class MidiSendingServiceImpl implements MidiSendingService {
 		sendMidiMessage(deviceMapping, midiParameter, midiValue);
 	}
 
-	public void sendMidiMessage(DeviceMapping deviceMapping, MidiParameter midiParameter, MidiValue midiValue) {
-		Optional<javax.sound.midi.MidiDevice.Info> midiDeviceInfoOptional = midiService
-				.getMidiOutput(deviceMapping.getConnection());
-		if (midiDeviceInfoOptional.isPresent()) {
-			javax.sound.midi.MidiDevice.Info midiDeviceInfo = midiDeviceInfoOptional.get();
+	public void sendMidiMessage(DeviceMapping deviceMapping, MidiParameter midiParameter, MidiValue midiValue)
+			throws DecoderException, InvalidMidiDataException {
+		MidiOutput midiOutput = midiService.getMidiOutput(deviceMapping.getConnection());
+		if (midiOutput != null) {
 			MidiDevice midiDevice = (MidiDevice) deviceMapping.getDevice();
+			String midiHex = midiDevice.getMessage(deviceMapping.getChannel(), midiParameter, midiValue);
+			MidiMessage midiMessage = createMidiMessage(midiHex);
+			midiOutput.getMidiOutput().send(midiMessage, 0L);
+		}
+	}
+
+	private MidiMessage createMidiMessage(String midiHex) throws DecoderException, InvalidMidiDataException {
+		byte[] data = Hex.decodeHex(midiHex);
+		if (midiHex.startsWith("F0")) {
+			SysexMessage sysexMessage = new SysexMessage();
+			sysexMessage.setMessage(data, data.length);
+			return sysexMessage;
+		} else {
+			ShortMessage shortMessage = new ShortMessage();
+			shortMessage.setMessage((int) data[0], (int) data[1], (int) data[2]);
+			return shortMessage;
 		}
 	}
 }

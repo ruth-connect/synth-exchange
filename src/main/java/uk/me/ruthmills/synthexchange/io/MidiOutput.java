@@ -33,6 +33,10 @@ public class MidiOutput {
 		return midiOutputInfo;
 	}
 
+	public Receiver getMidiOutput() {
+		return midiOutput;
+	}
+
 	public void close() {
 		midiOutput.close();
 		midiOutput = null;

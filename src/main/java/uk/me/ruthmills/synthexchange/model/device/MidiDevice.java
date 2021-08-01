@@ -53,4 +53,9 @@ public class MidiDevice extends Device {
 	public Optional<MidiParameter> findParameter(String name) {
 		return parameters.stream().filter(parameter -> parameter.getName().equals(name)).findFirst();
 	}
+
+	public String getMessage(String channel, MidiParameter midiParameter, MidiValue midiValue) {
+		return format.replace("${channel}", Integer.toString(Integer.parseInt(channel) - 1))
+				.replace("${parameter}", midiParameter.getParameter()).replace("${value}", midiValue.getValue());
+	}
 }

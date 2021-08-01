@@ -1,10 +1,11 @@
 package uk.me.ruthmills.synthexchange.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiUnavailableException;
+
+import uk.me.ruthmills.synthexchange.io.MidiOutput;
 
 public interface MidiService {
 
@@ -12,7 +13,7 @@ public interface MidiService {
 
 	public List<MidiDevice.Info> getMidiOutputs();
 
-	public Optional<MidiDevice.Info> getMidiOutput(String name);
+	public MidiOutput getMidiOutput(String name);
 
 	public void openMidiInput(MidiDevice.Info midiInputInfo) throws MidiUnavailableException;
 
