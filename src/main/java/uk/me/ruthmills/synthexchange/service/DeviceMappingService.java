@@ -1,6 +1,7 @@
 package uk.me.ruthmills.synthexchange.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.vaadin.flow.data.provider.ListDataProvider;
 
@@ -12,6 +13,8 @@ public interface DeviceMappingService {
 	public List<DeviceMapping> getInputs();
 
 	public List<DeviceMapping> getOutputs();
+
+	public Optional<DeviceMapping> getOutput(String name);
 
 	public List<Mapping> getMappings();
 

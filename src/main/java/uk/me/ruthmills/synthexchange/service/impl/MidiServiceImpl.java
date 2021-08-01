@@ -3,6 +3,7 @@ package uk.me.ruthmills.synthexchange.service.impl;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -40,6 +41,11 @@ public class MidiServiceImpl implements MidiService {
 	public List<MidiDevice.Info> getMidiOutputs() {
 		return midiAdapter.getMidiOutputs().stream().sorted(Comparator.comparing(MidiDevice.Info::getName))
 				.collect(Collectors.toList());
+	}
+
+	@Override
+	public Optional<MidiDevice.Info> getMidiOutput(String name) {
+		return midiAdapter.getMidiOutputs().stream().filter(output -> output.getName().equals(name)).findFirst();
 	}
 
 	@Override

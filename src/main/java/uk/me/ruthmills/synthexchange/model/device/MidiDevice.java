@@ -49,4 +49,8 @@ public class MidiDevice extends Device {
 						.replace("${parameter}", parameter.getParameter())))
 				.findFirst();
 	}
+
+	public Optional<MidiParameter> findParameter(String name) {
+		return parameters.stream().filter(parameter -> parameter.getName().equals(name)).findFirst();
+	}
 }

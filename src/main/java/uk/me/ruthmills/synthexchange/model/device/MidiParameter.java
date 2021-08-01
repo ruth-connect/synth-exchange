@@ -77,6 +77,10 @@ public class MidiParameter extends Parameter {
 		}
 	}
 
+	public Optional<MidiValue> findValue(String name) {
+		return values.stream().filter(value -> value.getName().equals(name)).findFirst();
+	}
+
 	private int getIntValue(String hex) throws DecoderException {
 		ByteBuffer byteBuffer = ByteBuffer.wrap(Hex.decodeHex(hex));
 		if (byteBuffer.capacity() == 1) {

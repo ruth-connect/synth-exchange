@@ -2,6 +2,7 @@ package uk.me.ruthmills.synthexchange.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
@@ -32,6 +33,11 @@ public class DeviceMappingServiceImpl implements DeviceMappingService {
 	@Override
 	public List<DeviceMapping> getOutputs() {
 		return outputs;
+	}
+
+	@Override
+	public Optional<DeviceMapping> getOutput(String name) {
+		return outputs.stream().filter(output -> output.getName().equals(name)).findFirst();
 	}
 
 	@Override
