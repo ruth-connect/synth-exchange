@@ -7,6 +7,8 @@ import javax.sound.midi.SysexMessage;
 
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,8 @@ public class MidiSendingServiceImpl implements MidiSendingService {
 
 	@Autowired
 	public MidiService midiService;
+
+	private static final Logger logger = LoggerFactory.getLogger(MidiSendingServiceImpl.class);
 
 	public void sendMidiMessage(DeviceMapping deviceMapping, MidiParameter midiParameter, String value)
 			throws DecoderException, InvalidMidiDataException {
@@ -44,6 +48,7 @@ public class MidiSendingServiceImpl implements MidiSendingService {
 			MidiDevice midiDevice = (MidiDevice) deviceMapping.getDevice();
 			String midiHex = midiDevice.getMessage(deviceMapping.getChannel(), midiParameter, midiValue);
 			MidiMessage midiMessage = createMidiMessage(midiHex);
+			logger.info("Sending MIDI message to: " + deviceMapping.getName());
 			midiOutput.getMidiOutput().send(midiMessage, 0L);
 		}
 	}
@@ -51,10 +56,12 @@ public class MidiSendingServiceImpl implements MidiSendingService {
 	private MidiMessage createMidiMessage(String midiHex) throws DecoderException, InvalidMidiDataException {
 		byte[] data = Hex.decodeHex(midiHex);
 		if (midiHex.startsWith("F0")) {
+			logger.info("Creating Sysex Message: " + midiHex);
 			SysexMessage sysexMessage = new SysexMessage();
 			sysexMessage.setMessage(data, data.length);
 			return sysexMessage;
 		} else {
+			logger.info("Creating Short Message: " + midiHex);
 			ShortMessage shortMessage = new ShortMessage();
 			shortMessage.setMessage((int) data[0], (int) data[1], (int) data[2]);
 			return shortMessage;
